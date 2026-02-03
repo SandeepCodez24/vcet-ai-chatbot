@@ -16,9 +16,32 @@
  * API configuration object
  * @constant {Object}
  */
+// Determine backend URL
+const getBackendUrl = () => {
+    // If running on Netlify (vcetai.netlify.app or similar), use Railway backend
+    if (window.location.hostname.includes('netlify.app')) {
+        return 'https://vcet-ai-chatbot-production.up.railway.app';
+    }
+
+    // If env var is set (e.g. by Vite/Webpack), use it
+    // Note: In vanilla JS without build system injection, this check is safe but might be unused
+    if (typeof process !== 'undefined' && process.env && process.env.VITE_API_URL) {
+        return process.env.VITE_API_URL;
+    }
+
+    // Default to current origin (for localhost:5000 or same-domain deployment)
+    // If you are running frontend on port 3000 and backend on 5000 locally, use:
+    if (window.location.port === '3000' || window.location.port === '5500' || window.location.port === '8080') {
+        // Assume backend is on port 5000 locally if we are on dev ports
+        return 'http://localhost:5000';
+    }
+
+    return window.location.origin;
+};
+
 const API_CONFIG = {
-    baseUrl: window.location.origin,
-    timeout: 30000,
+    baseUrl: getBackendUrl(),
+    timeout: 60000, // Increased timeout for initial cold starts
     retryAttempts: 3,
     retryDelay: 1000
 };

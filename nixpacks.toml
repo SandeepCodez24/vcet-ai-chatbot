@@ -1,16 +1,19 @@
 # Railway/Nixpacks configuration for Python Flask app
 # See: https://nixpacks.com/docs/providers/python
 
-# Force Python-only provider (ignore package.json)
+# Force Python provider only
+providers = ["python"]
+
 [phases.setup]
-nixPkgs = ["python311", "gcc"]
+nixPkgs = ["python311Full", "gcc"]
+aptPkgs = ["python3-pip"]
 
 [phases.install]
-cmds = ["python -m pip install --upgrade pip", "python -m pip install -r requirements.txt"]
+cmds = ["python3 -m ensurepip --upgrade", "python3 -m pip install --upgrade pip", "python3 -m pip install -r requirements.txt"]
 
-# Skip npm build - this is a Python app, not Node.js
+# Skip npm build - this is a Python app
 [phases.build]
 cmds = []
 
 [start]
-cmd = "python -m gunicorn server:app --bind 0.0.0.0:${PORT:-8080} --workers 1 --timeout 120"
+cmd = "python3 -m gunicorn server:app --bind 0.0.0.0:${PORT:-8080} --workers 1 --timeout 120"

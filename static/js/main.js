@@ -3,7 +3,6 @@
 // ===========================
 
 // API Configuration
-// API Configuration
 // Use the base URL determined in api.js (which handles Railway/Localhost switching)
 const API_BASE_URL = window.apiService ? window.apiService.baseUrl : window.location.origin;
 

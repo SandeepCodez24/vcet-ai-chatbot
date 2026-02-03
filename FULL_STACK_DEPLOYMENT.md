@@ -55,19 +55,19 @@ PORT = 10000
 ## 🌐 Step 2: Connect Frontend to Backend
 
 ### 2.1 Update API Base URL
-Your frontend on Netlify needs to point to the Render backend:
+Your frontend on Netlify needs to point to the Railway backend:
 
-1. In Netlify dashboard:
-   - Go to **Site settings** → **Environment variables**
-   - Add:
-     ```
-     VITE_API_URL = https://vcet-ai-backend.onrender.com
-     ```
-
-2. Or update `static/js/services/api.js`:
+1. The code automatically handles this in `services/api.js`:
    ```javascript
-   const API_BASE_URL = 'https://vcet-ai-backend.onrender.com';
+   if (window.location.hostname.includes('netlify.app')) {
+       return 'https://vcet-ai-chatbot-production.up.railway.app';
+   }
    ```
+
+2. Or update environment variables manually if needed:
+     ```
+     VITE_API_URL = https://vcet-ai-chatbot-production.up.railway.app
+     ```
 
 ### 2.2 Update CORS in Flask
 Make sure `server.py` allows requests from your Netlify domain:

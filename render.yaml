@@ -1,0 +1,16 @@
+services:
+  # Flask Backend with RAG
+  - type: web
+    name: vcet-ai-backend
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements-dev.txt"
+    startCommand: "gunicorn server:app"
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: PYTHON_VERSION
+        value: "3.9"
+      - key: PORT
+        value: "5000"
+    healthCheckPath: /api/health

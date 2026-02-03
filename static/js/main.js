@@ -1169,8 +1169,8 @@ function initMobileFeatures() {
     // Initialize message context menu
     initMessageContextMenu();
 
-    // Initialize network status indicator
-    initNetworkStatus();
+    // Network status indicator - DISABLED
+    // initNetworkStatus();
 
     // Initialize keyboard detection for input adjustment
     initKeyboardDetection();

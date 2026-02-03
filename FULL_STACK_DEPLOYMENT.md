@@ -116,25 +116,55 @@ Should return:
 
 ## 🔄 Alternative: Railway Deployment
 
-If Render is slow, try Railway:
+If Render is slow, try Railway (recommended for this project):
 
-### Railway Steps:
+### Railway Setup Steps:
 1. Go to: https://railway.app
 2. Sign in with GitHub
 3. **New Project** → **Deploy from GitHub repo**
 4. Select: `SandeepCodez24/vcet-ai-chatbot`
-5. Add Environment Variables:
+5. Add Environment Variables in Railway dashboard:
    ```
-   GROQ_API_KEY = your_key
-   PORT = 8080
+   GROQ_API_KEY = your_groq_api_key_here
    ```
-6. Railway auto-detects Python and runs:
-   ```
-   pip install -r requirements-dev.txt
-   gunicorn server:app
-   ```
+   Note: PORT is auto-configured by Railway
 
-Your backend will be at: `https://vcet-ai-backend.up.railway.app`
+### Railway Configuration Files (already included):
+The project includes these Railway-specific files:
+
+**`railway.toml`** - Railway config:
+```toml
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+startCommand = "gunicorn server:app --bind 0.0.0.0:$PORT --workers 1 --timeout 120"
+healthcheckPath = "/api/health"
+```
+
+**`nixpacks.toml`** - Build configuration:
+```toml
+[phases.setup]
+nixPkgs = ["python311", "gcc"]
+
+[phases.install]
+cmds = ["pip install --upgrade pip", "pip install -r requirements.txt"]
+
+[start]
+cmd = "gunicorn server:app --bind 0.0.0.0:${PORT:-8080} --workers 1 --timeout 120"
+```
+
+**`Procfile`** - Fallback start command:
+```
+web: gunicorn server:app --bind 0.0.0.0:$PORT --workers 1 --timeout 120
+```
+
+**`runtime.txt`** - Python version:
+```
+python-3.11.0
+```
+
+Your backend will be at: `https://vcet-ai-chatbot-production.up.railway.app`
 
 ## 🐛 Troubleshooting
 

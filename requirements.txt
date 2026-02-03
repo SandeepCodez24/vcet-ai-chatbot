@@ -1,0 +1,31 @@
+# Railway Backend Requirements
+# This file is used by Railway/nixpacks for deployment
+
+# Web Framework
+flask>=3.0.0
+flask-cors>=4.0.0
+gunicorn>=21.0.0
+
+# LangChain Ecosystem
+langchain
+langchain-core
+langchain-community
+langchain-text-splitters
+langchain-groq
+langchain_openai
+langgraph
+
+# Document Processing
+pypdf
+pymupdf
+
+# Vector Store & Embeddings
+sentence-transformers
+faiss-cpu
+
+# Database
+chromadb
+typesense
+
+# Utilities
+python-dotenv

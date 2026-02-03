@@ -5,7 +5,7 @@
 builder = "NIXPACKS"
 
 [deploy]
-startCommand = "python -m gunicorn server:app --bind 0.0.0.0:$PORT --workers 1 --timeout 120"
+startCommand = "/opt/venv/bin/gunicorn server:app --bind 0.0.0.0:$PORT --workers 1 --timeout 120"
 healthcheckPath = "/api/health"
 healthcheckTimeout = 300
 restartPolicyType = "ON_FAILURE"

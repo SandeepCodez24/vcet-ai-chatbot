@@ -1,19 +1,22 @@
 # Railway/Nixpacks configuration for Python Flask app
-# See: https://nixpacks.com/docs/providers/python
+# Using virtual environment to work with Nix's PEP 668
 
-# Force Python provider only
+# Force Python provider only (ignore package.json)
 providers = ["python"]
 
 [phases.setup]
 nixPkgs = ["python311Full", "gcc"]
-aptPkgs = ["python3-pip"]
 
 [phases.install]
-cmds = ["python3 -m ensurepip --upgrade", "python3 -m pip install --upgrade pip", "python3 -m pip install -r requirements.txt"]
+cmds = [
+  "python3 -m venv /opt/venv",
+  "/opt/venv/bin/pip install --upgrade pip",
+  "/opt/venv/bin/pip install -r requirements.txt"
+]
 
-# Skip npm build - this is a Python app
+# Skip npm build
 [phases.build]
 cmds = []
 
 [start]
-cmd = "python3 -m gunicorn server:app --bind 0.0.0.0:${PORT:-8080} --workers 1 --timeout 120"
+cmd = "/opt/venv/bin/gunicorn server:app --bind 0.0.0.0:${PORT:-8080} --workers 1 --timeout 120"

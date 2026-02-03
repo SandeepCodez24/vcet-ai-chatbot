@@ -20,7 +20,7 @@
 const getBackendUrl = () => {
     // If running on Netlify (vcetai.netlify.app or similar), use Railway backend
     if (window.location.hostname.includes('netlify.app')) {
-        return 'https://web-production-cae6c.up.railway.app';
+        return 'https://vcet-ai-chatbot-production.up.railway.app';
     }
 
     // If env var is set (e.g. by Vite/Webpack), use it

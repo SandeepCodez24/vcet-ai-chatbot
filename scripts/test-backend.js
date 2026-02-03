@@ -5,7 +5,7 @@
 
 const https = require('https');
 
-const BACKEND_URL = 'https://web-production-cae6c.up.railway.app';
+const BACKEND_URL = 'https://vcet-ai-chatbot-production.up.railway.app';
 const HEALTH_ENDPOINT = '/api/health';
 
 console.log(`\n🔍 Testing Backend: ${BACKEND_URL}`);

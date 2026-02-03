@@ -1,8 +1,8 @@
 [phases.setup]
-nixPkgs = ["python39"]
+nixPkgs = ["python39", "gcc", "musl-dev", "libffi-dev", "openssl-dev"]
 
 [phases.install]
-cmds = ["python -m pip install -r requirements-dev.txt"]
+cmds = ["python -m pip install --upgrade pip", "python -m pip install -r requirements-dev.txt"]
 
 [start]
-cmd = "python -m gunicorn server:app"
+cmd = "python -m gunicorn server:app --bind 0.0.0.0:$PORT"

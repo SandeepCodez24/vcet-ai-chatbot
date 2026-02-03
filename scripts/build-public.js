@@ -64,7 +64,7 @@ function build() {
     // Create public directory
     ensureDir(PUBLIC_DIR);
 
-    // Convert templates
+    // Convert index.html template
     const indexTemplate = path.join(TEMPLATES_DIR, 'index.html');
     const indexOutput = path.join(PUBLIC_DIR, 'index.html');
 
@@ -75,29 +75,13 @@ function build() {
         process.exit(1);
     }
 
-    // Copy static assets
-    const cssDir = path.join(STATIC_DIR, 'css');
-    const jsDir = path.join(STATIC_DIR, 'js');
-    const imagesDir = path.join(STATIC_DIR, 'images');
-
-    if (fs.existsSync(cssDir)) {
-        copyDir(cssDir, path.join(PUBLIC_DIR, 'css'));
-    }
-
-    if (fs.existsSync(jsDir)) {
-        copyDir(jsDir, path.join(PUBLIC_DIR, 'js'));
-    }
-
-    if (fs.existsSync(imagesDir)) {
-        copyDir(imagesDir, path.join(PUBLIC_DIR, 'images'));
-    }
-
     // Create additional static files
     createRobotsTxt();
     createManifest();
     createSitemap();
 
     console.log('\n=== Build complete! ===');
+    console.log('Note: Static assets (CSS/JS/images) are copied by npm scripts');
 }
 
 function createRobotsTxt() {

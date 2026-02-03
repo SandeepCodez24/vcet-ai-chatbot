@@ -21,12 +21,11 @@
   to = "/.netlify/functions/:splat"
   status = 200
 
-# SPA fallback - redirect all routes to index.html
+# SPA fallback - redirect all other routes to index.html  
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-  conditions = {Role = ["admin", "user"]}
 
 # Headers for security
 [[headers]]

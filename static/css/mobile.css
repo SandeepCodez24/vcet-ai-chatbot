@@ -1122,39 +1122,36 @@ body.dark-mode .context-menu {
 }
 
 /* ===========================
-   Improved Suggestion Chips Carousel
+   Improved Suggestion Chips - Vertical Stack
    =========================== */
 
 @media (max-width: 768px) {
     .suggestions-container {
         padding: 0;
+        width: 100%;
     }
 
     .suggestions-grid {
         display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;
-        gap: 0.5rem;
-        padding: 0.5rem 1rem;
-        margin: 0 -1rem;
-        scrollbar-width: none;
-    }
-
-    .suggestions-grid::-webkit-scrollbar {
-        display: none;
+        flex-direction: column;
+        gap: 0.625rem;
+        padding: 0;
+        margin: 0;
+        width: 100%;
     }
 
     .suggestion-chip {
-        flex: 0 0 auto;
-        scroll-snap-align: start;
-        min-width: 150px;
-        max-width: 250px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        flex: none;
+        width: 100%;
+        min-height: 48px;
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.875rem 1rem;
     }
 }
 

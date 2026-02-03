@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <meta name="description" content="VCET AI Chatbot - Get instant answers about Velammal College">
     <title>VCET AI Assistant - Velammal College Chatbot</title>
 
@@ -24,6 +24,11 @@
     <!-- Feature-specific styles are imported by index.css -->
     <!-- Keeping old imports for backward compatibility during migration -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Mobile responsiveness fixes -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mobile-fix.css') }}">
+
+    <!-- Mobile CSS loaded after main styles for proper overrides -->
 </head>
 
 <body>

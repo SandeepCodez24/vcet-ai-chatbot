@@ -5,4 +5,4 @@ nixPkgs = ["python39"]
 cmds = ["python -m pip install -r requirements-dev.txt"]
 
 [start]
-cmd = "gunicorn server:app"
+cmd = "python -m gunicorn server:app"

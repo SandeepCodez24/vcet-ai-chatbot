@@ -7,9 +7,9 @@
     "build": "npm run build:public && npm run build:static",
     "build:public": "node scripts/build-public.js",
     "build:static": "npm run copy:css && npm run copy:js && npm run copy:images",
-    "copy:css": "xcopy /E /I /Y static\\css public\\css",
-    "copy:js": "xcopy /E /I /Y static\\js public\\js",
-    "copy:images": "xcopy /E /I /Y static\\images public\\images 2>nul || echo No images to copy",
+    "copy:css": "cpy 'static/css/**' public/css --parents",
+    "copy:js": "cpy 'static/js/**' public/js --parents",
+    "copy:images": "cpy 'static/images/**' public/images --parents || echo 'No images to copy'",
     "dev": "python server.py",
     "dev:frontend": "live-server public --port=3000",
     "lint": "eslint static/js/**/*.js --fix",
@@ -38,6 +38,7 @@
     "node": ">=18.0.0"
   },
   "devDependencies": {
+    "cpy-cli": "^5.0.0",
     "eslint": "^8.56.0",
     "live-server": "^1.2.2",
     "prettier": "^3.2.4"

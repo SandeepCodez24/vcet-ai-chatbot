@@ -1398,50 +1398,12 @@ function handleMessageTouchEnd() {
 
 /**
  * Initialize network status indicator
+ * DISABLED: Network status banner removed as per user request
  */
 function initNetworkStatus() {
-    // Create indicator
-    networkStatusIndicator = document.createElement('div');
-    networkStatusIndicator.className = 'network-status';
-    networkStatusIndicator.id = 'networkStatusIndicator';
-    networkStatusIndicator.innerHTML = '<i class="fas fa-wifi"></i><span>You\'re offline</span>';
-    document.body.appendChild(networkStatusIndicator);
-
-    // Update status
-    function updateNetworkStatus(showOnlineNotification = false) {
-        if (!navigator.onLine) {
-            networkStatusIndicator.innerHTML = '<i class="fas fa-wifi"></i><span>You\'re offline</span>';
-            networkStatusIndicator.classList.add('offline');
-            networkStatusIndicator.classList.remove('online');
-            document.body.classList.add('has-offline-banner');
-        } else {
-            if (showOnlineNotification) {
-                networkStatusIndicator.innerHTML = '<i class="fas fa-wifi"></i><span>Back online!</span>';
-                networkStatusIndicator.classList.add('online');
-                networkStatusIndicator.classList.remove('offline');
-                // Auto-hide the "back online" notification after animation
-                setTimeout(() => {
-                    networkStatusIndicator.classList.remove('online');
-                }, 2000);
-            } else {
-                networkStatusIndicator.classList.remove('offline', 'online');
-            }
-            document.body.classList.remove('has-offline-banner');
-        }
-    }
-
-    window.addEventListener('online', () => {
-        updateNetworkStatus(true);
-        showToast('Back online!', 'success');
-    });
-
-    window.addEventListener('offline', () => {
-        updateNetworkStatus(false);
-        showToast('You\'re offline. Some features may not work.', 'error');
-    });
-
-    // Initial status check
-    updateNetworkStatus(false);
+    // Network status indicator disabled
+    // The feature has been removed to keep the UI clean
+    return;
 }
 
 /**

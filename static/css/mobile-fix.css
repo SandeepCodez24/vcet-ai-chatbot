@@ -18,49 +18,6 @@
     --mobile-input-height: 80px;
 }
 
-/* ===========================
-   Offline Banner - Enhanced
-   =========================== */
-.offline-banner {
-    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-    color: white;
-    text-align: center;
-    padding: 0.625rem var(--spacing-md);
-    font-size: 0.8125rem;
-    font-weight: 600;
-    position: fixed;
-    top: var(--mobile-header-height);
-    left: 0;
-    right: 0;
-    z-index: 150;
-    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    animation: slideDownBanner 0.3s ease-out;
-}
-
-.offline-banner i {
-    font-size: 1rem;
-}
-
-@keyframes slideDownBanner {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Hide offline banner when back online */
-.offline-banner.hidden {
-    display: none;
-}
 
 /* ===========================
    Fix Header on Mobile
@@ -152,21 +109,11 @@
         padding-top: var(--mobile-header-height);
     }
 
-    /* When offline, adjust for banner */
-    body.has-offline-banner {
-        padding-top: calc(var(--mobile-header-height) + 36px);
-    }
-
     .container {
         height: calc(100vh - var(--mobile-header-height));
         height: calc(100dvh - var(--mobile-header-height));
         display: flex;
         flex-direction: column;
-    }
-
-    body.has-offline-banner .container {
-        height: calc(100vh - var(--mobile-header-height) - 36px);
-        height: calc(100dvh - var(--mobile-header-height) - 36px);
     }
 
     .main-content {
@@ -1121,57 +1068,6 @@
 
     body.dark-mode .sidebar-overlay {
         background: rgba(0, 0, 0, 0.7);
-    }
-}
-
-/* ===========================
-   Network Status Indicator
-   =========================== */
-.network-status {
-    position: fixed;
-    top: var(--mobile-header-height);
-    left: 0;
-    right: 0;
-    padding: 0.5rem 1rem;
-    background: var(--accent);
-    color: white;
-    text-align: center;
-    font-size: 0.8125rem;
-    font-weight: 500;
-    z-index: 180;
-    transform: translateY(-100%);
-    transition: transform 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-}
-
-.network-status.offline {
-    background: var(--danger);
-    transform: translateY(0);
-}
-
-.network-status.online {
-    background: var(--accent);
-    transform: translateY(0);
-    animation: slideDownFadeOut 2s ease-in-out forwards;
-}
-
-@keyframes slideDownFadeOut {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-    70% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(-100%);
-        opacity: 0;
     }
 }
 

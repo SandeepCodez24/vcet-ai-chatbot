@@ -2,16 +2,24 @@
 // VCET AI Chatbot - Main JavaScript
 // ===========================
 
-// API Configuration
-// Use the base URL determined in api.js (which handles Railway/Localhost switching)
+// Use API configuration from api.js (loaded first)
+// API_ENDPOINTS and STORAGE_KEYS are available via window object from api.js
 const API_BASE_URL = window.apiService ? window.apiService.baseUrl : window.location.origin;
 
-const API_ENDPOINTS = {
+// Reference API_ENDPOINTS from api.js (avoid redeclaration)
+const endpoints = window.API_ENDPOINTS || {
     query: `${API_BASE_URL}/api/query`,
     stats: `${API_BASE_URL}/api/stats`,
     suggestions: `${API_BASE_URL}/api/suggestions`,
     health: `${API_BASE_URL}/api/health`,
     clearCache: `${API_BASE_URL}/api/clear-cache`
+};
+
+// Reference STORAGE_KEYS from api.js (avoid redeclaration)
+const storageKeys = window.STORAGE_KEYS || {
+    apiKey: 'vcet_groq_api_key',
+    theme: 'theme',
+    chatHistory: 'chatHistory'
 };
 
 // DOM Elements
@@ -88,13 +96,6 @@ const theme = localStorage.getItem('theme') || 'light';
 const MAX_CONSECUTIVE_FAILURES = 3;
 const LOADING_WARNING_TIME = 5 * 60 * 1000; // 5 minutes
 const LOADING_TIMEOUT_TIME = 30 * 60 * 1000; // 30 minutes
-
-// API Key Storage
-const STORAGE_KEYS = {
-    apiKey: 'vcet_groq_api_key',
-    theme: 'theme',
-    chatHistory: 'chatHistory'
-};
 
 // ===========================
 // Initialization
@@ -239,7 +240,7 @@ function setupEventListeners() {
 
 async function checkHealth() {
     try {
-        const response = await fetch(API_ENDPOINTS.health);
+        const response = await fetch(endpoints.health);
         const data = await response.json();
         console.log('Health check:', data);
         return {
@@ -471,7 +472,7 @@ function sleep(ms) {
 
 async function loadSuggestions() {
     try {
-        const response = await fetch(API_ENDPOINTS.suggestions);
+        const response = await fetch(endpoints.suggestions);
         const data = await response.json();
 
         if (data.status === 'success') {
@@ -501,12 +502,12 @@ async function sendQuery(query) {
         };
 
         // Add custom API key if available
-        const savedApiKey = localStorage.getItem(STORAGE_KEYS.apiKey);
+        const savedApiKey = localStorage.getItem(storageKeys.apiKey);
         if (savedApiKey) {
             headers['X-Groq-Api-Key'] = savedApiKey;
         }
 
-        const response = await fetch(API_ENDPOINTS.query, {
+        const response = await fetch(endpoints.query, {
             method: 'POST',
             headers: headers,
             body: JSON.stringify({ query })
@@ -545,7 +546,7 @@ async function sendQuery(query) {
 
 async function loadStats() {
     try {
-        const response = await fetch(API_ENDPOINTS.stats);
+        const response = await fetch(endpoints.stats);
         const data = await response.json();
 
         if (data.status === 'success') {
@@ -866,7 +867,7 @@ function openSettingsModal() {
     if (elements.settingsModal) {
         elements.settingsModal.classList.add('active');
         // Load saved API key into input
-        const savedKey = localStorage.getItem(STORAGE_KEYS.apiKey);
+        const savedKey = localStorage.getItem(storageKeys.apiKey);
         if (savedKey && elements.apiKeyInput) {
             elements.apiKeyInput.value = savedKey;
         }
@@ -909,7 +910,7 @@ function saveApiKey() {
 
     // Save to localStorage
     try {
-        localStorage.setItem(STORAGE_KEYS.apiKey, apiKey);
+        localStorage.setItem(storageKeys.apiKey, apiKey);
         showApiKeyValidation('valid', 'API key saved successfully');
         showToast('API key saved! Rate limit has been reset.', 'success');
 
@@ -928,7 +929,7 @@ function saveApiKey() {
 
 function clearApiKey() {
     if (confirm('Are you sure you want to clear your API key?')) {
-        localStorage.removeItem(STORAGE_KEYS.apiKey);
+        localStorage.removeItem(storageKeys.apiKey);
         if (elements.apiKeyInput) {
             elements.apiKeyInput.value = '';
         }
@@ -938,7 +939,7 @@ function clearApiKey() {
 }
 
 function loadSavedApiKey() {
-    const savedKey = localStorage.getItem(STORAGE_KEYS.apiKey);
+    const savedKey = localStorage.getItem(storageKeys.apiKey);
     if (savedKey && elements.apiKeyInput) {
         elements.apiKeyInput.value = savedKey;
     }

@@ -15,8 +15,12 @@
   # Node version
   NODE_VERSION = "18"
   
-  # Python version (for serverless functions if needed)
-  PYTHON_VERSION = "3.9"
+  # Skip Python installation (not needed for static site + Node.js functions)
+  # This prevents disk space issues from installing heavy ML packages
+  PYTHON_VERSION = "3.8"
+  
+  # Disable pip cache to save disk space
+  PIP_NO_CACHE_DIR = "1"
 
 # Redirects for API endpoints to serverless functions
 [[redirects]]

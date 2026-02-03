@@ -1,0 +1,7 @@
+# Netlify Build Requirements
+# This file contains ONLY packages needed for the build process
+# The Netlify Functions are Node.js and don't need Python dependencies
+# The heavy ML packages (PyTorch, FAISS, etc.) are for local Flask server only
+
+# No Python packages needed for static site build
+# All logic is in Netlify Functions (Node.js)

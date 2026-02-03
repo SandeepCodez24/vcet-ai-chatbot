@@ -1,0 +1,276 @@
+/**
+ * ===========================
+ * Modal Components
+ * VCET AI Chatbot
+ * ===========================
+ * 
+ * Styles for modals, dialogs, and overlay components.
+ */
+
+/* ===========================
+   Base Modal
+   =========================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: var(--z-modal);
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl);
+    animation: backdropFadeIn 0.3s ease-out;
+}
+
+.modal.active {
+    display: flex;
+}
+
+/* ===========================
+   Modal Content
+   =========================== */
+
+.modal-content {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    max-width: 600px;
+    width: 100%;
+    max-height: 80vh;
+    overflow: hidden;
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+/* ===========================
+   Modal Header
+   =========================== */
+
+.modal-header {
+    padding: var(--spacing-lg);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.modal-header h3 {
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: white;
+}
+
+.modal-header h3 i {
+    font-size: 1.125rem;
+}
+
+/* ===========================
+   Modal Body
+   =========================== */
+
+.modal-body {
+    padding: var(--spacing-xl);
+    overflow-y: auto;
+    max-height: calc(80vh - 80px);
+}
+
+/* ===========================
+   Modal Footer
+   =========================== */
+
+.modal-footer {
+    padding: var(--spacing-lg);
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-sm);
+}
+
+/* ===========================
+   Stats Grid (Stats Modal)
+   =========================== */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.stat-card {
+    padding: var(--spacing-lg);
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+
+/* ===========================
+   Info Box (Stats Modal)
+   =========================== */
+
+.stats-info {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-md);
+    background: var(--bg-tertiary);
+    border-radius: var(--radius);
+    font-size: var(--text-sm);
+}
+
+.stats-info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.stats-info-row:last-child {
+    border-bottom: none;
+}
+
+.stats-info-label {
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.stats-info-value {
+    color: var(--text-primary);
+}
+
+/* ===========================
+   Popup Overlay
+   =========================== */
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: var(--z-modal);
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl);
+}
+
+.popup-overlay.active {
+    display: flex;
+}
+
+/* ===========================
+   Popup Content
+   =========================== */
+
+.popup-content {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    animation: popIn 0.3s ease-out;
+    overflow: hidden;
+}
+
+.popup-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.popup-icon.warning {
+    color: var(--secondary);
+}
+
+.popup-icon.error {
+    color: var(--danger);
+}
+
+.popup-icon.success {
+    color: var(--accent);
+}
+
+.popup-title {
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+}
+
+.popup-text {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xl);
+    line-height: var(--leading-relaxed);
+}
+
+.popup-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+}
+
+/* ===========================
+   Responsive Modal Styles
+   =========================== */
+
+@media (max-width: 768px) {
+    .modal {
+        padding: var(--spacing-sm);
+        align-items: flex-end;
+    }
+
+    .modal-content {
+        max-width: 100%;
+        max-height: 90vh;
+        border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+        animation: slideUp 0.3s ease-out;
+    }
+
+    .modal-body {
+        max-height: calc(90vh - 80px);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+    }
+
+    .stat-card {
+        padding: var(--spacing-md);
+    }
+
+    .stat-value {
+        font-size: var(--text-2xl);
+    }
+
+    .popup-content {
+        margin: var(--spacing-md);
+        max-width: calc(100% - var(--spacing-xl));
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}

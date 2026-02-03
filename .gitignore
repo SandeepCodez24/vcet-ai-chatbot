@@ -1,0 +1,106 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+.virtualenv/
+
+# Environment Variables
+.env
+.env.local
+.env.production
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+vcet_chatbot.log
+
+# FAISS (don't commit generated index)
+# Uncomment if you want to exclude FAISS store
+# faiss_store/
+
+# Data (don't commit sensitive documents or large files)
+data/
+
+# Large PDF files (GitHub limit is 50MB)
+*.pdf
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Backup files
+*.backup
+*.old
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Package files
+*.tar.gz
+*.zip
+*.rar
+
+# Node (if using for frontend build)
+node_modules/
+package-lock.json
+
+# Build outputs
+*.pyc
+*.pyo
+*.pyd
+
+# Process files
+*.pid
+*.sock
+
+# Monitoring
+prometheus/
+grafana/

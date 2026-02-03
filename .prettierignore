@@ -1,0 +1,55 @@
+# Prettier Ignore File
+# Files and directories that Prettier should not format
+
+# Dependencies
+node_modules/
+
+# Build outputs
+public/
+dist/
+build/
+
+# Minified files
+*.min.js
+*.min.css
+
+# Vendor files
+vendor/
+
+# Generated files
+faiss_store/
+
+# Data files
+*.json
+!package.json
+!.prettierrc
+!manifest.json
+
+# Python files
+*.py
+__pycache__/
+*.pyc
+venv/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Lock files
+package-lock.json
+yarn.lock
+
+# Logs
+*.log
+logs/

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VCET AI Chatbot - Get instant answers about Velammal College">
+    <title>VCET AI Assistant - Velammal College Chatbot</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Stylesheets - Modular CSS Structure -->
+    <!-- Main index.css imports: base (variables, reset, animations), layouts, and components -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+    <!-- Feature-specific styles are imported by index.css -->
+    <!-- Keeping old imports for backward compatibility during migration -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-card">
+            <div class="loading-logo">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h2 class="loading-title">VCET AI Assistant</h2>
+            <p class="loading-subtitle">Initializing your AI assistant...</p>
+
+            <div class="loading-progress-container">
+                <div class="loading-progress-bar">
+                    <div class="loading-progress-fill" id="loadingProgressFill"></div>
+                </div>
+                <div class="loading-progress-text">
+                    <span id="loadingProgressPercent">0%</span>
+                    <span id="loadingElapsed">0s</span>
+                </div>
+            </div>
+
+            <div class="loading-status" id="loadingStatus">
+                <div class="loading-status-item active" id="statusServer">
+                    <span class="loading-status-icon"><i class="fas fa-spinner"></i></span>
+                    <span>Connecting to server...</span>
+                </div>
+                <div class="loading-status-item" id="statusModel">
+                    <span class="loading-status-icon"><i class="fas fa-circle"></i></span>
+                    <span>Loading AI model...</span>
+                </div>
+                <div class="loading-status-item" id="statusVectorStore">
+                    <span class="loading-status-icon"><i class="fas fa-circle"></i></span>
+                    <span>Initializing knowledge base...</span>
+                </div>
+                <div class="loading-status-item" id="statusReady">
+                    <span class="loading-status-icon"><i class="fas fa-circle"></i></span>
+                    <span>Ready to chat!</span>
+                </div>
+            </div>
+
+            <div class="loading-timeout-warning" id="loadingTimeoutWarning">
+                <p><i class="fas fa-exclamation-triangle"></i> Loading is taking longer than expected...</p>
+                <p>This may be due to high server load or network issues.</p>
+            </div>
+
+            <button class="loading-retry-btn" id="loadingRetryBtn" style="display: none;">
+                <i class="fas fa-redo"></i> Retry Connection
+            </button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo-circle">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>VCET AI Assistant</h1>
+                    <p>Velammal College of Engineering & Technology</p>
+                </div>
+            </div>
+
+            <div class="header-actions">
+                <button class="icon-btn" id="statsBtn" title="View Statistics">
+                    <i class="fas fa-chart-bar"></i>
+                </button>
+                <button class="icon-btn" id="settingsBtn" title="Settings">
+                    <i class="fas fa-cog"></i>
+                </button>
+                <button class="icon-btn" id="themeToggle" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3><i class="fas fa-sparkles"></i> Quick Actions</h3>
+                <button class="close-sidebar" id="closeSidebar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="quick-actions">
+                <button class="action-btn" data-action="about">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About VCET</span>
+                </button>
+                <button class="action-btn" data-action="courses">
+                    <i class="fas fa-book"></i>
+                    <span>Courses</span>
+                </button>
+                <button class="action-btn" data-action="admissions">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>Admissions</span>
+                </button>
+                <button class="action-btn" data-action="placements">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Placements</span>
+                </button>
+                <button class="action-btn" data-action="infrastructure">
+                    <i class="fas fa-building"></i>
+                    <span>Infrastructure</span>
+                </button>
+                <button class="action-btn" data-action="contact">
+                    <i class="fas fa-phone"></i>
+                    <span>Contact</span>
+                </button>
+            </div>
+
+            <div class="sidebar-footer">
+                <button class="clear-btn" id="clearChat">
+                    <i class="fas fa-trash-alt"></i>
+                    <span>Clear Chat</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="main-content">
+            <!-- Chat Container -->
+            <div class="chat-container" id="chatContainer">
+                <!-- Welcome Screen -->
+                <div class="welcome-screen" id="welcomeScreen">
+                    <div class="welcome-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h2>Welcome to VCET AI Assistant!</h2>
+                    <p>Ask me anything about Velammal College of Engineering and Technology</p>
+
+                    <!-- Suggested Questions -->
+                    <div class="suggestions-container">
+                        <h3>Try asking:</h3>
+                        <div class="suggestions-grid" id="suggestionsGrid">
+                            <!-- Suggestions will be loaded dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Messages -->
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Messages will be added here dynamically -->
+                </div>
+
+                <!-- Typing Indicator -->
+                <div class="typing-indicator" id="typingIndicator" style="display: none;">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+            </div>
+
+            <!-- Chat Input -->
+            <div class="chat-input-container">
+                <button class="icon-btn mobile-menu-btn" id="toggleSidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="input-wrapper">
+                    <textarea id="messageInput" placeholder="Ask me anything about VCET..." rows="1"
+                        maxlength="1000"></textarea>
+                    <div class="input-actions">
+                        <span class="char-count" id="charCount">0/1000</span>
+                        <button class="send-btn" id="sendBtn" disabled>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Statistics Modal -->
+    <div class="modal" id="statsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-chart-line"></i> System Statistics</h3>
+                <button class="close-modal" id="closeStatsModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="statsContent">
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading statistics...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage"></span>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="settings-modal" id="settingsModal">
+        <div class="settings-content">
+            <div class="settings-header">
+                <h3><i class="fas fa-cog"></i> Settings</h3>
+                <button class="close-settings" id="closeSettingsModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="settings-body">
+                <!-- API Usage Section -->
+                <div class="api-usage-section" id="apiUsageSection">
+                    <div class="api-usage-header">
+                        <span>API Usage</span>
+                        <strong id="apiUsageText">-- / -- requests</strong>
+                    </div>
+                    <div class="api-usage-bar">
+                        <div class="api-usage-fill low" id="apiUsageFill" style="width: 0%"></div>
+                    </div>
+                    <div class="api-usage-warning" id="apiUsageWarning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span>API usage is high. Consider adding your own API key.</span>
+                    </div>
+                </div>
+
+                <!-- API Key Input -->
+                <div class="form-group">
+                    <label for="apiKeyInput">Groq API Key</label>
+                    <div class="api-key-input-wrapper">
+                        <input type="password" id="apiKeyInput" class="api-key-input" placeholder="gsk_xxxxxxxxxxxxxxxx"
+                            autocomplete="off">
+                        <button class="toggle-visibility-btn" id="toggleApiKeyVisibility" type="button">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="api-key-validation" id="apiKeyValidation">
+                        <i class="fas fa-check-circle"></i>
+                        <span>API key is valid</span>
+                    </div>
+                    <p class="form-hint">Enter your own Groq API key to bypass rate limits. Get one at <a
+                            href="https://console.groq.com" target="_blank">console.groq.com</a></p>
+                </div>
+
+                <!-- Settings Actions -->
+                <div class="settings-actions">
+                    <button class="settings-btn secondary" id="clearApiKeyBtn">
+                        <i class="fas fa-trash"></i> Clear Key
+                    </button>
+                    <button class="settings-btn primary" id="saveApiKeyBtn">
+                        <i class="fas fa-save"></i> Save Key
+                    </button>
+                </div>
+
+                <div class="settings-divider"></div>
+
+                <!-- About Section -->
+                <div class="settings-about">
+                    <h4><i class="fas fa-info-circle"></i> About</h4>
+                    <p><strong>VCET AI Assistant</strong> v1.0.0</p>
+                    <p>Powered by RAG Technology with Groq LLM</p>
+                    <p>© 2026 Velammal College of Engineering & Technology</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rate Limit Popup -->
+    <div class="rate-limit-popup" id="rateLimitPopup">
+        <div class="rate-limit-content">
+            <div class="rate-limit-header">
+                <div class="rate-limit-icon">
+                    <i class="fas fa-ban"></i>
+                </div>
+                <h3>API Rate Limit Reached</h3>
+                <p>You've exceeded the maximum number of requests</p>
+            </div>
+            <div class="rate-limit-body">
+                <p class="rate-limit-message">
+                    The chatbot is temporarily unavailable because the API rate limit has been reached.
+                    Don't worry - you can fix this easily!
+                </p>
+                <div class="rate-limit-tips">
+                    <h4><i class="fas fa-lightbulb"></i> What you can do:</h4>
+                    <ul>
+                        <li>Add your own free Groq API key in Settings</li>
+                        <li>Wait a few minutes for the limit to reset</li>
+                        <li>Try again with shorter queries</li>
+                    </ul>
+                </div>
+                <div class="rate-limit-actions">
+                    <button class="rate-limit-btn secondary" id="rateLimitDismissBtn">
+                        <i class="fas fa-clock"></i> Wait
+                    </button>
+                    <button class="rate-limit-btn primary" id="rateLimitSettingsBtn">
+                        <i class="fas fa-key"></i> Add API Key
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timeout Popup -->
+    <div class="timeout-popup" id="timeoutPopup">
+        <div class="timeout-content">
+            <div class="timeout-header">
+                <div class="timeout-icon">🕐</div>
+                <h3>Loading is taking too long</h3>
+            </div>
+            <div class="timeout-body">
+                <p class="timeout-message">
+                    The AI model is taking longer than expected to initialize.
+                    This could be due to high server load or network issues.
+                </p>
+                <div class="timeout-suggestions">
+                    <h4><i class="fas fa-lightbulb"></i> Suggestions:</h4>
+                    <ol>
+                        <li>Try refreshing the page</li>
+                        <li>Check your internet connection</li>
+                        <li>Try again in a few minutes</li>
+                        <li>Contact support if the issue persists</li>
+                    </ol>
+                </div>
+                <div class="timeout-actions">
+                    <button class="timeout-btn secondary" id="timeoutLaterBtn">
+                        <i class="fas fa-clock"></i> Try Later
+                    </button>
+                    <button class="timeout-btn primary" id="timeoutRetryBtn">
+                        <i class="fas fa-redo"></i> Retry Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rate Limit Banner (inline warning) -->
+    <div class="rate-limit-banner" id="rateLimitBanner">
+        <i class="fas fa-exclamation-circle"></i>
+        <span>API rate limit reached. Messaging is temporarily disabled.</span>
+        <button class="rate-limit-banner-btn" id="rateLimitBannerBtn">Add API Key</button>
+    </div>
+
+    <!-- JavaScript - Modular Architecture -->
+    <!-- Load service modules first -->
+    <script src="{{ url_for('static', filename='js/services/storage.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/services/api.js') }}"></script>
+
+    <!-- Utility modules -->
+    <script src="{{ url_for('static', filename='js/utils/helpers.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/utils/gestures.js') }}"></script>
+
+    <!-- Main application -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>

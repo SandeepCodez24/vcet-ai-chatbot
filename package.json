@@ -1,0 +1,45 @@
+{
+  "name": "vcet-ai-chatbot",
+  "version": "2.0.0",
+  "description": "VCET AI Assistant - RAG-powered chatbot for Velammal College of Engineering & Technology",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:public && npm run build:static",
+    "build:public": "node scripts/build-public.js",
+    "build:static": "npm run copy:css && npm run copy:js && npm run copy:images",
+    "copy:css": "xcopy /E /I /Y static\\css public\\css",
+    "copy:js": "xcopy /E /I /Y static\\js public\\js",
+    "copy:images": "xcopy /E /I /Y static\\images public\\images 2>nul || echo No images to copy",
+    "dev": "python server.py",
+    "dev:frontend": "live-server public --port=3000",
+    "lint": "eslint static/js/**/*.js --fix",
+    "lint:check": "eslint static/js/**/*.js",
+    "format": "prettier --write \"static/**/*.{js,css,html}\"",
+    "format:check": "prettier --check \"static/**/*.{js,css,html}\"",
+    "validate": "npm run lint:check && npm run format:check",
+    "test": "echo No tests configured"
+  },
+  "keywords": [
+    "chatbot",
+    "rag",
+    "vcet",
+    "education",
+    "ai",
+    "groq",
+    "netlify"
+  ],
+  "author": "VCET Development Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "live-server": "^1.2.2",
+    "prettier": "^3.2.4"
+  }
+}

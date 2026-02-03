@@ -1,0 +1,333 @@
+/**
+ * ===========================
+ * Chat Components
+ * VCET AI Chatbot
+ * ===========================
+ * 
+ * Styles for chat messages, typing indicator, and related components.
+ */
+
+/* ===========================
+   Chat Messages Container
+   =========================== */
+
+.chat-messages {
+    display: none;
+}
+
+.chat-messages.active {
+    display: block;
+}
+
+/* ===========================
+   Message
+   =========================== */
+
+.message {
+    margin-bottom: var(--spacing-lg);
+    animation: slideIn 0.3s ease-out;
+}
+
+.message-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.message-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.message.user .message-avatar {
+    background: var(--secondary);
+    color: white;
+}
+
+.message.bot .message-avatar {
+    background: var(--primary);
+    color: white;
+}
+
+.message-sender {
+    font-weight: 600;
+    font-size: var(--text-sm);
+    color: var(--text-primary);
+}
+
+.message-time {
+    font-size: var(--text-xs);
+    color: var(--text-light);
+    margin-left: auto;
+}
+
+/* ===========================
+   Message Content
+   =========================== */
+
+.message-content {
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    max-width: 85%;
+    position: relative;
+    line-height: var(--leading-relaxed);
+    word-wrap: break-word;
+}
+
+.message.user .message-content {
+    background: var(--primary);
+    color: white;
+    margin-left: 48px;
+    border-bottom-left-radius: var(--radius-sm);
+}
+
+.message.bot .message-content {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    margin-left: 48px;
+    border-bottom-left-radius: var(--radius-sm);
+}
+
+/* Error message styling */
+.message-content.error {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid var(--danger);
+    color: var(--danger);
+}
+
+/* ===========================
+   Message Actions
+   =========================== */
+
+.message-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+    margin-left: 48px;
+}
+
+/* ===========================
+   Typing Indicator
+   =========================== */
+
+.typing-indicator {
+    display: flex;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-md);
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-lg);
+    width: fit-content;
+    margin-left: 48px;
+}
+
+.typing-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--primary);
+    border-radius: var(--radius-full);
+    animation: typing 1.4s infinite;
+}
+
+.typing-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* ===========================
+   Message Badges
+   =========================== */
+
+.message-badge {
+    font-size: var(--text-xs);
+    background: var(--accent);
+    color: white;
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+    margin-left: var(--spacing-sm);
+    font-weight: 500;
+}
+
+.message-badge.cached {
+    background: var(--accent);
+}
+
+.message-badge.error {
+    background: var(--danger);
+}
+
+/* ===========================
+   Response Time Badge
+   =========================== */
+
+.response-time {
+    font-size: var(--text-xs);
+    color: var(--text-light);
+    margin-left: var(--spacing-sm);
+}
+
+/* ===========================
+   Code Blocks in Messages
+   =========================== */
+
+.message-content pre {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius);
+    padding: var(--spacing-md);
+    margin: var(--spacing-sm) 0;
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+}
+
+.message.user .message-content pre {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.message-content code {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    background: rgba(0, 0, 0, 0.1);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+}
+
+.message.user .message-content code {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ===========================
+   Links in Messages
+   =========================== */
+
+.message-content a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.message-content a:hover {
+    opacity: 0.8;
+}
+
+/* ===========================
+   Welcome Screen
+   =========================== */
+
+.welcome-screen {
+    text-align: center;
+    max-width: 700px;
+    margin: 3rem auto;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.welcome-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 2rem;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+    box-shadow: var(--shadow-xl);
+    animation: bounce 2s infinite;
+}
+
+.welcome-screen h2 {
+    font-family: var(--font-heading);
+    font-size: var(--text-3xl);
+    margin-bottom: var(--spacing-md);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.welcome-screen>p {
+    color: var(--text-secondary);
+    font-size: var(--text-xl);
+    margin-bottom: 3rem;
+}
+
+/* ===========================
+   Suggestions
+   =========================== */
+
+.suggestions-container h3 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.suggestions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+/* ===========================
+   Responsive Styles
+   =========================== */
+
+@media (max-width: 768px) {
+    .message-content {
+        max-width: 95%;
+    }
+
+    .message-avatar {
+        width: 28px;
+        height: 28px;
+        font-size: var(--text-xs);
+    }
+
+    .message.user .message-content,
+    .message.bot .message-content {
+        margin-left: 36px;
+    }
+
+    .message-actions {
+        margin-left: 36px;
+    }
+
+    .typing-indicator {
+        margin-left: 36px;
+    }
+
+    .welcome-screen {
+        margin: 2rem auto;
+    }
+
+    .welcome-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5rem;
+    }
+
+    .welcome-screen h2 {
+        font-size: var(--text-2xl);
+    }
+
+    .suggestions-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-screen h2 {
+        font-size: 1.25rem;
+    }
+}

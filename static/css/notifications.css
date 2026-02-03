@@ -1,0 +1,448 @@
+/* ===========================
+   Notifications & Rate Limit Styles
+   VCET AI Chatbot
+   =========================== */
+
+/* Enhanced Toast Notifications */
+.toast-container {
+    position: fixed;
+    bottom: var(--spacing-xl);
+    right: var(--spacing-xl);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 400px;
+    width: calc(100% - 2rem);
+}
+
+.toast {
+    background: var(--accent);
+    color: white;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    display: none;
+    align-items: center;
+    gap: var(--spacing-sm);
+    animation: toastSlideIn 0.3s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.toast.active {
+    display: flex;
+}
+
+.toast.toast-success {
+    background: var(--accent);
+}
+
+.toast.toast-error {
+    background: var(--danger);
+}
+
+.toast.toast-warning {
+    background: var(--secondary);
+}
+
+.toast.toast-info {
+    background: var(--primary-light);
+}
+
+/* Toast Progress Bar */
+.toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.3);
+    animation: toast-progress 3s linear forwards;
+}
+
+@keyframes toast-progress {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0%;
+    }
+}
+
+/* Toast Close Button */
+.toast-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    padding: 0.25rem;
+    font-size: 0.875rem;
+    transition: color 0.2s ease;
+}
+
+.toast-close:hover {
+    color: white;
+}
+
+/* Rate Limit Blocking Popup */
+.rate-limit-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 3000;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.rate-limit-popup.active {
+    display: flex;
+}
+
+.rate-limit-content {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    animation: popupBounceIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    overflow: hidden;
+}
+
+@keyframes popupBounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.rate-limit-header {
+    background: linear-gradient(135deg, var(--danger) 0%, #dc2626 100%);
+    color: white;
+    padding: 2rem;
+}
+
+.rate-limit-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.rate-limit-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.rate-limit-header p {
+    font-size: 0.9375rem;
+    opacity: 0.9;
+}
+
+.rate-limit-body {
+    padding: 1.5rem 2rem 2rem;
+}
+
+.rate-limit-message {
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.rate-limit-tips {
+    background: var(--bg-tertiary);
+    border-radius: var(--radius);
+    padding: 1rem;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.rate-limit-tips h4 {
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rate-limit-tips ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rate-limit-tips li {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    padding: 0.375rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+}
+
+.rate-limit-tips li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+}
+
+.rate-limit-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.rate-limit-btn {
+    flex: 1;
+    padding: 0.875rem 1.25rem;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.rate-limit-btn.primary {
+    background: var(--primary);
+    color: white;
+}
+
+.rate-limit-btn.primary:hover {
+    background: var(--primary-dark);
+}
+
+.rate-limit-btn.secondary {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.rate-limit-btn.secondary:hover {
+    background: var(--bg-primary);
+}
+
+/* Rate Limit Banner */
+.rate-limit-banner {
+    display: none;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1.25rem;
+    background: rgba(239, 68, 68, 0.1);
+    border-bottom: 1px solid rgba(239, 68, 68, 0.2);
+    color: var(--danger);
+    font-size: 0.875rem;
+}
+
+.rate-limit-banner.visible {
+    display: flex;
+}
+
+.rate-limit-banner-btn {
+    margin-left: auto;
+    padding: 0.375rem 0.875rem;
+    background: var(--danger);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 0.8125rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.rate-limit-banner-btn:hover {
+    background: #dc2626;
+}
+
+/* Input Disabled State */
+.input-wrapper.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.input-wrapper.disabled::after {
+    content: '🔒 Rate limit exceeded';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--danger);
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: var(--radius-lg);
+}
+
+body.dark-mode .input-wrapper.disabled::after {
+    background: rgba(30, 41, 59, 0.9);
+}
+
+/* Timeout Popup */
+.timeout-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 3000;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.timeout-popup.active {
+    display: flex;
+}
+
+.timeout-content {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    max-width: 450px;
+    width: 100%;
+    animation: popupBounceIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.timeout-header {
+    background: linear-gradient(135deg, var(--secondary) 0%, #d97706 100%);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.timeout-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.timeout-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.timeout-body {
+    padding: 1.5rem 2rem 2rem;
+}
+
+.timeout-message {
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.timeout-suggestions {
+    background: var(--bg-tertiary);
+    border-radius: var(--radius);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.timeout-suggestions h4 {
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.timeout-suggestions ol {
+    padding-left: 1.25rem;
+    margin: 0;
+}
+
+.timeout-suggestions li {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    padding: 0.25rem 0;
+}
+
+.timeout-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.timeout-btn {
+    flex: 1;
+    padding: 0.875rem 1.25rem;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.timeout-btn.primary {
+    background: var(--primary);
+    color: white;
+}
+
+.timeout-btn.primary:hover {
+    background: var(--primary-dark);
+}
+
+.timeout-btn.secondary {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.timeout-btn.secondary:hover {
+    background: var(--bg-primary);
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .toast-container {
+        bottom: 1rem;
+        right: 1rem;
+        left: 1rem;
+        max-width: none;
+    }
+
+    .rate-limit-content,
+    .timeout-content {
+        margin: 0.5rem;
+    }
+
+    .rate-limit-header,
+    .timeout-header {
+        padding: 1.5rem;
+    }
+
+    .rate-limit-body,
+    .timeout-body {
+        padding: 1.25rem 1.5rem 1.5rem;
+    }
+
+    .rate-limit-actions,
+    .timeout-actions {
+        flex-direction: column;
+    }
+}

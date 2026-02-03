@@ -1,0 +1,75 @@
+# Netlify configuration for VCET AI Chatbot
+# This file configures build settings and redirects for deployment
+
+[build]
+  # Directory to publish (static files)
+  publish = "public"
+  
+  # Build command
+  command = "npm run build"
+  
+  # Functions directory (for serverless functions)
+  functions = "netlify/functions"
+
+[build.environment]
+  # Node version
+  NODE_VERSION = "18"
+  
+  # Python version (for serverless functions if needed)
+  PYTHON_VERSION = "3.9"
+
+# Redirects for API endpoints to serverless functions
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# SPA fallback - redirect all routes to index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  conditions = {Role = ["admin", "user"]}
+
+# Headers for security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://api.groq.com"
+
+# Cache static assets
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Environment contexts
+[context.production]
+  environment = { DEBUG = "false" }
+
+[context.deploy-preview]
+  environment = { DEBUG = "true" }
+
+[context.branch-deploy]
+  environment = { DEBUG = "true" }
+
+# Dev settings
+[dev]
+  command = "python server.py"
+  port = 5000
+  targetPort = 5000
+  autoLaunch = true

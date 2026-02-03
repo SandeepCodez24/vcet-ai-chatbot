@@ -1,0 +1,1284 @@
+/* ===========================
+   Mobile UI Enhancement Styles
+   Modern Chatbot Design
+   =========================== */
+
+/* ===========================
+   Mobile-First Base Adjustments
+   =========================== */
+
+/* Touch-friendly tap targets (min 44x44px) */
+@media (max-width: 768px) {
+
+    button,
+    .action-btn,
+    .suggestion-chip,
+    .icon-btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* ===========================
+   Header Mobile Enhancement
+   =========================== */
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0.75rem 1rem;
+        position: sticky;
+        top: 0;
+    }
+
+    .header-content {
+        gap: 0.5rem;
+    }
+
+    .logo-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 1.125rem;
+    }
+
+    .logo-section {
+        gap: 0.5rem;
+    }
+
+    .header-actions {
+        gap: 0.25rem;
+    }
+
+    .header-actions .icon-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .logo-text h1 {
+        font-size: 1rem;
+    }
+
+    .header-actions .icon-btn {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* ===========================
+   Chat Container Mobile
+   =========================== */
+
+@media (max-width: 768px) {
+    .container {
+        height: calc(100vh - 60px);
+        height: calc(100dvh - 60px);
+        /* Dynamic viewport height for mobile */
+    }
+
+    .main-content {
+        height: 100%;
+    }
+
+    .chat-container {
+        padding: 1rem;
+        padding-bottom: 0.5rem;
+    }
+}
+
+/* ===========================
+   Modern Message Bubbles
+   =========================== */
+
+@media (max-width: 768px) {
+    .message {
+        margin-bottom: 1rem;
+    }
+
+    .message-header {
+        margin-bottom: 0.375rem;
+    }
+
+    .message-avatar {
+        width: 28px;
+        height: 28px;
+        font-size: 0.75rem;
+    }
+
+    .message-sender {
+        font-size: 0.8125rem;
+    }
+
+    .message-time {
+        font-size: 0.6875rem;
+    }
+
+    .message-content {
+        padding: 0.75rem 1rem;
+        max-width: 90%;
+        font-size: 0.9375rem;
+        line-height: 1.5;
+        border-radius: 1rem;
+    }
+
+    .message.user .message-content {
+        margin-left: 36px;
+        border-bottom-right-radius: 0.375rem;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    }
+
+    .message.bot .message-content {
+        margin-left: 36px;
+        border-bottom-left-radius: 0.375rem;
+    }
+
+    .message-actions {
+        margin-left: 36px;
+        margin-top: 0.375rem;
+    }
+
+    .message-action-btn {
+        padding: 0.375rem 0.625rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* ===========================
+   Modern Input Bar (Floating Style)
+   =========================== */
+
+@media (max-width: 768px) {
+    .chat-input-container {
+        padding: 0.75rem;
+        padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0));
+        background: var(--bg-secondary);
+        border-top: 1px solid var(--border);
+        gap: 0.5rem;
+    }
+
+    .input-wrapper {
+        border-radius: 1.5rem;
+        padding: 0.625rem 1rem;
+        background: var(--bg-tertiary);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .input-wrapper:focus-within {
+        box-shadow: 0 2px 12px rgba(59, 130, 246, 0.15);
+    }
+
+    #messageInput {
+        font-size: 1rem;
+        min-height: 24px;
+        max-height: 100px;
+    }
+
+    .input-actions {
+        margin-top: 0.375rem;
+    }
+
+    .send-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 1rem;
+    }
+
+    .mobile-menu-btn {
+        width: 40px;
+        height: 40px;
+        color: var(--text-primary);
+        background: var(--bg-tertiary);
+        border-radius: 50%;
+    }
+
+    .char-count {
+        font-size: 0.6875rem;
+    }
+}
+
+/* ===========================
+   Welcome Screen Mobile
+   =========================== */
+
+@media (max-width: 768px) {
+    .welcome-screen {
+        margin: 1rem auto;
+        padding: 0 0.5rem;
+    }
+
+    .welcome-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .welcome-screen h2 {
+        font-size: 1.375rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .welcome-screen>p {
+        font-size: 0.9375rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .suggestions-container h3 {
+        font-size: 0.875rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .suggestions-grid {
+        gap: 0.5rem;
+    }
+
+    .suggestion-chip {
+        padding: 0.875rem 1rem;
+        font-size: 0.875rem;
+        border-radius: 1rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.75rem;
+    }
+
+    .welcome-screen h2 {
+        font-size: 1.25rem;
+    }
+
+    .welcome-screen>p {
+        font-size: 0.875rem;
+    }
+}
+
+/* ===========================
+   Sidebar Mobile Enhancement
+   =========================== */
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 85%;
+        max-width: 320px;
+        border-radius: 0 1rem 1rem 0;
+    }
+
+    .sidebar-header {
+        padding: 1rem;
+    }
+
+    .sidebar-header h3 {
+        font-size: 0.9375rem;
+    }
+
+    .quick-actions {
+        padding: 0.75rem;
+    }
+
+    .action-btn {
+        padding: 0.875rem;
+        font-size: 0.9375rem;
+        border-radius: 0.75rem;
+    }
+
+    .sidebar-footer {
+        padding: 0.75rem;
+    }
+
+    .clear-btn {
+        padding: 0.875rem;
+    }
+
+    /* Sidebar overlay backdrop */
+    .sidebar::before {
+        content: '';
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+
+    .sidebar.active::before {
+        display: block;
+    }
+}
+
+/* ===========================
+   Typing Indicator Mobile
+   =========================== */
+
+@media (max-width: 768px) {
+    .typing-indicator {
+        margin-left: 36px;
+        padding: 0.625rem 1rem;
+        border-radius: 1rem;
+    }
+
+    .typing-dot {
+        width: 6px;
+        height: 6px;
+    }
+}
+
+/* ===========================
+   Toast Mobile
+   =========================== */
+
+@media (max-width: 768px) {
+    .toast {
+        left: 1rem;
+        right: 1rem;
+        bottom: calc(80px + env(safe-area-inset-bottom, 0));
+        max-width: none;
+        border-radius: 1rem;
+    }
+}
+
+/* ===========================
+   Modal Mobile
+   =========================== */
+
+@media (max-width: 768px) {
+    .modal {
+        padding: 0.5rem;
+        align-items: flex-end;
+    }
+
+    .modal-content {
+        max-width: 100%;
+        max-height: 90vh;
+        border-radius: 1.5rem 1.5rem 0 0;
+        animation: modalSlideUp 0.3s ease-out;
+    }
+
+    @keyframes modalSlideUp {
+        from {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .modal-header {
+        padding: 1rem 1.25rem;
+    }
+
+    .modal-header h3 {
+        font-size: 1.125rem;
+    }
+
+    .modal-body {
+        padding: 1rem 1.25rem 1.5rem;
+        max-height: calc(90vh - 60px);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    .stat-card {
+        padding: 1rem;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+}
+
+/* ===========================
+   Pull-to-Refresh Indicator (CSS only hint)
+   =========================== */
+
+@media (max-width: 768px) {
+    .chat-container {
+        overscroll-behavior-y: contain;
+    }
+}
+
+/* ===========================
+   Smooth Scroll & Momentum
+   =========================== */
+
+@media (max-width: 768px) {
+
+    .chat-container,
+    .quick-actions,
+    .modal-body {
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+}
+
+/* ===========================
+   Safe Area Insets (iPhone notch support)
+   =========================== */
+
+@supports (padding: env(safe-area-inset-bottom)) {
+    @media (max-width: 768px) {
+        .chat-input-container {
+            padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+        }
+
+        .sidebar {
+            padding-top: env(safe-area-inset-top);
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    }
+}
+
+/* ===========================
+   Dark Mode Mobile Adjustments
+   =========================== */
+
+@media (max-width: 768px) {
+    body.dark-mode .input-wrapper {
+        background: var(--bg-tertiary);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    body.dark-mode .mobile-menu-btn {
+        background: var(--bg-tertiary);
+    }
+
+    body.dark-mode .suggestion-chip {
+        border-color: var(--border);
+    }
+}
+
+/* ===========================
+   Landscape Mode
+   =========================== */
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .header {
+        padding: 0.5rem 1rem;
+    }
+
+    .logo-circle {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+
+    .container {
+        height: calc(100vh - 48px);
+    }
+
+    .chat-container {
+        padding: 0.5rem 1rem;
+    }
+
+    .welcome-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .welcome-screen h2 {
+        font-size: 1.125rem;
+    }
+
+    .chat-input-container {
+        padding: 0.5rem;
+    }
+}
+
+/* ===========================
+   Ultra-Small Devices (< 320px)
+   =========================== */
+
+@media (max-width: 320px) {
+    .header {
+        padding: 0.5rem;
+    }
+
+    .logo-circle {
+        width: 32px;
+        height: 32px;
+    }
+
+    .logo-text h1 {
+        font-size: 0.875rem;
+    }
+
+    .header-actions .icon-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.875rem;
+    }
+
+    .input-wrapper {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .send-btn,
+    .mobile-menu-btn {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* ===========================
+   Animations for Mobile
+   =========================== */
+
+@media (max-width: 768px) {
+    /* Reduce motion for better performance */
+    @media (prefers-reduced-motion: reduce) {
+
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+
+    /* Smooth message animation */
+    .message {
+        animation: mobileSlideIn 0.2s ease-out;
+    }
+
+    @keyframes mobileSlideIn {
+        from {
+            opacity: 0;
+            transform: translateY(8px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Suggestion chip hover/tap effect */
+    .suggestion-chip:active {
+        transform: scale(0.98);
+        background: var(--primary-light);
+        color: white;
+    }
+
+    /* Action button tap effect */
+    .action-btn:active {
+        transform: scale(0.98);
+    }
+}
+
+/* ===========================
+   PWA Standalone Mode
+   =========================== */
+
+@media all and (display-mode: standalone) {
+    .header {
+        padding-top: env(safe-area-inset-top);
+    }
+}
+
+/* ===========================
+   Rate Limit Banner Mobile Position
+   =========================== */
+
+@media (max-width: 768px) {
+    .rate-limit-banner {
+        padding: 0.75rem 1rem;
+        font-size: 0.8125rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        z-index: 150;
+    }
+
+    .rate-limit-banner span {
+        flex: 1 1 100%;
+    }
+
+    .rate-limit-banner-btn {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        margin-left: 0;
+    }
+}
+
+/* ===========================
+   Improved Focus States for Mobile
+   =========================== */
+
+@media (max-width: 768px) {
+
+    /* Hide outline on touch but keep for keyboard */
+    button:focus:not(:focus-visible),
+    input:focus:not(:focus-visible),
+    textarea:focus:not(:focus-visible) {
+        outline: none;
+    }
+
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+        outline: 2px solid var(--primary-light);
+        outline-offset: 2px;
+    }
+}
+
+/* ===========================
+   Pull-to-Refresh Indicator
+   =========================== */
+
+.pull-refresh-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    overflow: hidden;
+    background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    transition: height 0.1s ease-out, opacity 0.1s ease-out;
+    opacity: 0;
+}
+
+.pull-refresh-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.pull-refresh-content .pull-arrow {
+    font-size: 1.25rem;
+    color: var(--primary);
+    transition: transform 0.2s ease;
+}
+
+.pull-refresh-content .pull-spinner {
+    font-size: 1.25rem;
+    color: var(--primary);
+}
+
+.pull-refresh-content .pull-text {
+    font-weight: 500;
+}
+
+/* ===========================
+   Context Menu (Long Press)
+   =========================== */
+
+.context-menu {
+    position: fixed;
+    z-index: 1100;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15), 0 0 0 1px var(--border);
+    overflow: hidden;
+    min-width: 160px;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.95) translateY(-5px);
+    transition: all 0.15s ease-out;
+    transform-origin: top left;
+}
+
+.context-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1) translateY(0);
+}
+
+.context-menu-items {
+    padding: 0.5rem 0;
+}
+
+.context-menu-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1.25rem;
+    border: none;
+    background: transparent;
+    color: var(--text-primary);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    text-align: left;
+}
+
+.context-menu-item:active {
+    background: var(--bg-tertiary);
+}
+
+.context-menu-item i {
+    width: 20px;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.context-menu-item:last-child {
+    border-top: 1px solid var(--border);
+}
+
+/* Dark mode context menu */
+body.dark-mode .context-menu {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--border);
+}
+
+/* ===========================
+   Sidebar Swipe Overlay
+   =========================== */
+
+.sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 199;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar-overlay.active {
+    opacity: 1;
+}
+
+/* Swipe hint indicator */
+@media (max-width: 768px) {
+    .swipe-hint {
+        position: fixed;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 60px;
+        background: var(--primary);
+        border-radius: 0 4px 4px 0;
+        opacity: 0.3;
+        z-index: 100;
+        pointer-events: none;
+        animation: swipeHintPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes swipeHintPulse {
+
+        0%,
+        100% {
+            opacity: 0.3;
+            transform: translateY(-50%) translateX(0);
+        }
+
+        50% {
+            opacity: 0.6;
+            transform: translateY(-50%) translateX(3px);
+        }
+    }
+
+    /* Hide hint when sidebar is open */
+    .sidebar.active~.swipe-hint {
+        display: none;
+    }
+}
+
+/* ===========================
+   Enhanced Sidebar for Gestures
+   =========================== */
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 200;
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: transform;
+        box-shadow: none;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+        box-shadow: 8px 0 30px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Sidebar drag handle */
+    .sidebar::after {
+        content: '';
+        position: absolute;
+        right: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 100%;
+        background: transparent;
+    }
+}
+
+/* ===========================
+   Enhanced Touch Feedback
+   =========================== */
+
+@media (max-width: 768px) {
+
+    /* Ripple effect base */
+    .touch-ripple {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .touch-ripple::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .touch-ripple:active::after {
+        width: 200%;
+        height: 200%;
+        opacity: 0;
+        transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+    }
+
+    /* Enhanced button press states */
+    .action-btn,
+    .suggestion-chip,
+    .settings-btn,
+    .rate-limit-btn,
+    .timeout-btn {
+        transition: transform 0.1s ease, background 0.2s ease, box-shadow 0.2s ease;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .action-btn:active,
+    .suggestion-chip:active,
+    .settings-btn:active,
+    .rate-limit-btn:active,
+    .timeout-btn:active {
+        transform: scale(0.96);
+    }
+
+    /* Send button enhanced feedback */
+    .send-btn {
+        transition: transform 0.15s ease, background 0.2s ease;
+    }
+
+    .send-btn:active:not(:disabled) {
+        transform: scale(0.9);
+    }
+
+    .send-btn:disabled {
+        opacity: 0.5;
+    }
+}
+
+/* ===========================
+   Message Long-Press State
+   =========================== */
+
+@media (max-width: 768px) {
+    .message-content {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .message-content.long-press-active {
+        transform: scale(1.02);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Message copy button on mobile */
+    .message-content .copy-btn-mobile {
+        display: none;
+        position: absolute;
+        top: -36px;
+        right: 0;
+        padding: 0.5rem 0.75rem;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .message-content:focus .copy-btn-mobile,
+    .message-content.show-actions .copy-btn-mobile {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+    }
+}
+
+/* ===========================
+   Improved Scrolling Experience
+   =========================== */
+
+@media (max-width: 768px) {
+    .chat-messages {
+        scroll-snap-type: y proximity;
+        overflow-anchor: auto;
+    }
+
+    .message {
+        scroll-snap-align: end;
+    }
+
+    /* Improved scroll momentum */
+    .chat-container {
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Hide scrollbar on mobile for cleaner look */
+    .chat-messages::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    .chat-messages::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .chat-messages::-webkit-scrollbar-thumb {
+        background: var(--border);
+        border-radius: 3px;
+    }
+}
+
+/* ===========================
+   Floating Action Button (Optional Enhancement)
+   =========================== */
+
+@media (max-width: 768px) {
+    .scroll-to-bottom-btn {
+        position: fixed;
+        right: 1rem;
+        bottom: calc(90px + env(safe-area-inset-bottom, 0));
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: var(--primary);
+        color: white;
+        border: none;
+        box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.125rem;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.2s ease;
+        cursor: pointer;
+    }
+
+    .scroll-to-bottom-btn.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .scroll-to-bottom-btn:active {
+        transform: scale(0.95);
+        box-shadow: 0 2px 10px rgba(30, 58, 138, 0.2);
+    }
+}
+
+/* ===========================
+   Bottom Sheet Modal Style
+   =========================== */
+
+@media (max-width: 768px) {
+    .settings-modal.active {
+        align-items: flex-end;
+    }
+
+    .settings-content {
+        max-width: 100%;
+        border-radius: 1.5rem 1.5rem 0 0;
+        max-height: 90vh;
+        animation: sheetSlideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes sheetSlideUp {
+        from {
+            transform: translateY(100%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    /* Sheet drag handle */
+    .settings-header::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 2px;
+    }
+
+    .rate-limit-content,
+    .timeout-content {
+        max-width: 100%;
+        border-radius: 1.5rem 1.5rem 0 0;
+        margin: 0;
+    }
+}
+
+/* ===========================
+   Haptic Feedback Visual Hints
+   =========================== */
+
+@media (max-width: 768px) {
+
+    /* Subtle pulse on successful actions */
+    @keyframes successPulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+        }
+
+        70% {
+            box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+        }
+
+        100% {
+            box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+        }
+    }
+
+    .action-success {
+        animation: successPulse 0.4s ease-out;
+    }
+
+    /* Error shake animation */
+    @keyframes errorShake {
+
+        0%,
+        100% {
+            transform: translateX(0);
+        }
+
+        10%,
+        30%,
+        50%,
+        70%,
+        90% {
+            transform: translateX(-5px);
+        }
+
+        20%,
+        40%,
+        60%,
+        80% {
+            transform: translateX(5px);
+        }
+    }
+
+    .action-error {
+        animation: errorShake 0.5s ease;
+    }
+}
+
+/* ===========================
+   Improved Suggestion Chips Carousel
+   =========================== */
+
+@media (max-width: 768px) {
+    .suggestions-container {
+        padding: 0;
+    }
+
+    .suggestions-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        margin: 0 -1rem;
+        scrollbar-width: none;
+    }
+
+    .suggestions-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .suggestion-chip {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        min-width: 150px;
+        max-width: 250px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+/* ===========================
+   Keyboard Avoidance
+   =========================== */
+
+@media (max-width: 768px) {
+
+    /* When keyboard is visible, adjust layout */
+    .keyboard-visible .chat-input-container {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-bottom: 0.75rem;
+    }
+
+    .keyboard-visible .container {
+        padding-bottom: 80px;
+    }
+
+    /* Smooth transition when keyboard appears */
+    .chat-input-container,
+    .container {
+        transition: padding-bottom 0.3s ease;
+    }
+}
+
+/* ===========================
+   Network Status Indicator
+   =========================== */
+
+@media (max-width: 768px) {
+    .network-status {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        padding: 0.5rem 1rem;
+        background: var(--secondary);
+        color: white;
+        text-align: center;
+        font-size: 0.8125rem;
+        font-weight: 500;
+        z-index: 180;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .network-status.offline {
+        background: var(--danger);
+        transform: translateY(0);
+    }
+
+    .network-status i {
+        margin-right: 0.5rem;
+    }
+}
+
+/* ===========================
+   Voice Input Button (Enhancement)
+   =========================== */
+
+@media (max-width: 768px) {
+    .voice-input-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--bg-tertiary);
+        border: none;
+        color: var(--text-secondary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        transition: all 0.2s ease;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .voice-input-btn:active {
+        background: var(--primary);
+        color: white;
+        transform: scale(1.1);
+    }
+
+    .voice-input-btn.recording {
+        background: var(--danger);
+        color: white;
+        animation: recordingPulse 1s ease-in-out infinite;
+    }
+
+    @keyframes recordingPulse {
+
+        0%,
+        100% {
+            box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+        }
+
+        50% {
+            box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+        }
+    }
+}
+
+/* ===========================
+   Extra Touch Area for Small Elements
+   =========================== */
+
+@media (max-width: 768px) {
+
+    /* Extend touch areas */
+    .message-action-btn::before,
+    .char-count::before {
+        content: '';
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        bottom: -5px;
+        left: -5px;
+    }
+
+    .message-action-btn,
+    .close-sidebar {
+        position: relative;
+    }
+}

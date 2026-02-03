@@ -1,0 +1,96 @@
+/**
+ * ===========================
+ * VCET AI Chatbot - Main CSS
+ * ===========================
+ * 
+ * This is the main entry point for all CSS styles.
+ * It imports all modular CSS files in the correct order.
+ * 
+ * Structure:
+ * 1. Base (variables, reset, animations)
+ * 2. Layouts (header, sidebar, main)
+ * 3. Components (buttons, forms, chat, modal)
+ * 4. Feature-specific (loading, settings, notifications, mobile)
+ * 
+ * @author VCET AI Team
+ * @version 2.0.0
+ */
+
+/* ===========================
+   Base Styles
+   =========================== */
+
+@import 'base/variables.css';
+@import 'base/reset.css';
+@import 'base/animations.css';
+
+/* ===========================
+   Layout Styles
+   =========================== */
+
+@import 'layouts/header.css';
+@import 'layouts/sidebar.css';
+@import 'layouts/main.css';
+
+/* ===========================
+   Component Styles
+   =========================== */
+
+@import 'components/buttons.css';
+@import 'components/forms.css';
+@import 'components/chat.css';
+@import 'components/modal.css';
+
+/* ===========================
+   Feature-Specific Styles
+   =========================== */
+
+@import 'loading.css';
+@import 'settings.css';
+@import 'notifications.css';
+@import 'mobile.css';
+
+/* ===========================
+   Legacy Compatibility
+   
+   The styles below are kept for backward compatibility.
+   They include any remaining styles from the original
+   style.css that weren't extracted into modules.
+   =========================== */
+
+/* ===========================
+   Loading Spinner (Inline)
+   =========================== */
+
+.loading-spinner {
+    text-align: center;
+    padding: var(--spacing-xl);
+}
+
+.loading-spinner i {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: var(--spacing-md);
+}
+
+/* ===========================
+   Toast Positioning Override
+   
+   Note: Main toast styles are in notifications.css
+   This section provides positioning compatibility.
+   =========================== */
+
+.toast {
+    position: fixed;
+    bottom: var(--spacing-xl);
+    right: var(--spacing-xl);
+    z-index: var(--z-toast);
+}
+
+@media (max-width: 768px) {
+    .toast {
+        left: var(--spacing-md);
+        right: var(--spacing-md);
+        bottom: calc(80px + env(safe-area-inset-bottom, 0));
+    }
+}

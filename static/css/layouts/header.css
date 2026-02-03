@@ -1,0 +1,145 @@
+/**
+ * ===========================
+ * Header Layout
+ * VCET AI Chatbot
+ * ===========================
+ * 
+ * Styles for the main header navigation.
+ */
+
+/* ===========================
+   Header Container
+   =========================== */
+
+.header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    box-shadow: var(--shadow-lg);
+    position: sticky;
+    top: 0;
+    z-index: var(--z-sticky);
+}
+
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===========================
+   Logo Section
+   =========================== */
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.logo-circle {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    backdrop-filter: blur(10px);
+    flex-shrink: 0;
+}
+
+.logo-text h1 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: white;
+}
+
+.logo-text p {
+    font-size: var(--text-sm);
+    opacity: 0.9;
+    margin-bottom: 0;
+}
+
+/* ===========================
+   Header Actions
+   =========================== */
+
+.header-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+/* ===========================
+   Responsive Styles
+   =========================== */
+
+@media (max-width: 768px) {
+    .header {
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+
+    .header-content {
+        gap: var(--spacing-sm);
+    }
+
+    .logo-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 1.125rem;
+    }
+
+    .logo-section {
+        gap: var(--spacing-sm);
+    }
+
+    .logo-text h1 {
+        font-size: 1.125rem;
+    }
+
+    .logo-text p {
+        display: none;
+    }
+
+    .header-actions {
+        gap: var(--spacing-xs);
+    }
+
+    .header-actions .icon-btn {
+        width: 40px;
+        height: 40px;
+        font-size: var(--text-lg);
+    }
+}
+
+@media (max-width: 360px) {
+    .logo-text h1 {
+        font-size: var(--text-lg);
+    }
+
+    .header-actions .icon-btn {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: var(--spacing-md);
+    }
+}
+
+/* ===========================
+   PWA Standalone Mode
+   =========================== */
+
+@media all and (display-mode: standalone) {
+    .header {
+        padding-top: calc(var(--spacing-lg) + env(safe-area-inset-top));
+    }
+}

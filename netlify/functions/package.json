@@ -1,0 +1,11 @@
+{
+    "name": "vcet-chatbot-functions",
+    "version": "2.0.0",
+    "description": "Netlify serverless functions for VCET AI Chatbot",
+    "private": true,
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}

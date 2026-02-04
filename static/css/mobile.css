@@ -903,6 +903,10 @@ body.dark-mode .context-menu {
     /* Send button enhanced feedback */
     .send-btn {
         transition: transform 0.15s ease, background 0.2s ease;
+        /* Fix: ensure button is clickable */
+        position: relative;
+        z-index: 10;
+        pointer-events: auto;
     }
 
     .send-btn:active:not(:disabled) {

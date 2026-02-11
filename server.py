@@ -70,13 +70,18 @@ def query():
         # Get client ID for rate limiting
         client_id = request.remote_addr
         
-        # Check rate limit
-        if not rate_limiter.is_allowed(client_id):
-            return jsonify({
-                "status": "error",
-                "message": "Rate limit exceeded. Please try again later.",
-                "remaining_requests": 0
-            }), 429
+        # Check for custom API key in headers
+        custom_api_key = request.headers.get('X-Groq-Api-Key')
+        
+        # If custom API key is provided, skip rate limiting for this user
+        if not custom_api_key:
+            # Check rate limit only for users without custom API key
+            if not rate_limiter.is_allowed(client_id):
+                return jsonify({
+                    "status": "error",
+                    "message": "Rate limit exceeded. Please try again later.",
+                    "remaining_requests": 0
+                }), 429
         
         # Get query from request
         data = request.get_json()
@@ -101,7 +106,7 @@ def query():
                 "message": "Query is too long (max 1000 characters)"
             }), 400
         
-        logger.info(f"Received query: {user_query[:100]}...")
+        logger.info(f"Received query: {user_query[:100]}... (Custom API Key: {'Yes' if custom_api_key else 'No'})")
         
         # Check cache
         cached_response = query_cache.get(user_query)
@@ -115,7 +120,7 @@ def query():
                 "response": cached_response["response"],
                 "sources": cached_response.get("sources", []),
                 "cached": True,
-                "remaining_requests": rate_limiter.get_remaining(client_id)
+                "remaining_requests": rate_limiter.get_remaining(client_id) if not custom_api_key else 999
             }), 200
         
         rag_stats["cache_misses"] += 1
@@ -133,7 +138,16 @@ def query():
         # Perform RAG search
         start_time = time.time()
         try:
-            response = rag_search.search_and_summarize(user_query, top_k=top_k)
+            # Use custom API key if provided, otherwise use the default RAG search
+            if custom_api_key:
+                response = rag_search.search_and_summarize_with_api_key(
+                    user_query, 
+                    api_key=custom_api_key,
+                    top_k=top_k
+                )
+            else:
+                response = rag_search.search_and_summarize(user_query, top_k=top_k)
+            
             response_time = time.time() - start_time
             
             # Update stats
@@ -161,11 +175,19 @@ def query():
                 "sources": result["sources"],
                 "response_time": result["response_time"],
                 "cached": False,
-                "remaining_requests": rate_limiter.get_remaining(client_id)
+                "remaining_requests": rate_limiter.get_remaining(client_id) if not custom_api_key else 999
             }), 200
             
         except Exception as e:
             logger.error(f"Error processing query: {str(e)}")
+            # Check if error is related to invalid API key
+            error_message = str(e)
+            if "api" in error_message.lower() and "key" in error_message.lower():
+                return jsonify({
+                    "status": "error",
+                    "message": "Invalid API key. Please check your Groq API key in Settings.",
+                    "error": str(e) if Config.DEBUG else None
+                }), 401
             return jsonify({
                 "status": "error",
                 "message": "Failed to process query. Please try again.",

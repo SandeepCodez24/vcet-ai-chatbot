@@ -908,22 +908,30 @@ function saveApiKey() {
         return;
     }
 
+    // Show checking state
+    showApiKeyValidation('checking', 'Saving API key...');
+
     // Save to localStorage
     try {
         localStorage.setItem(storageKeys.apiKey, apiKey);
-        showApiKeyValidation('valid', 'API key saved successfully');
-        showToast('API key saved! Rate limit has been reset.', 'success');
 
-        // Reset rate limit state
-        resetRateLimitState();
-
-        // Close modal after a brief delay
+        // Small delay to show the checking state
         setTimeout(() => {
-            closeSettingsModal();
-        }, 1500);
+            showApiKeyValidation('valid', 'API key saved successfully');
+            showToast('API key saved! You can now use your own API quota.', 'success');
+
+            // Reset rate limit state
+            resetRateLimitState();
+
+            // Close modal after a brief delay
+            setTimeout(() => {
+                closeSettingsModal();
+            }, 1500);
+        }, 300);
     } catch (error) {
         console.error('Failed to save API key:', error);
         showApiKeyValidation('invalid', 'Failed to save API key');
+        showToast('Error saving API key. Please try again.', 'error');
     }
 }
 

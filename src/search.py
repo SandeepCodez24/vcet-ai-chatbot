@@ -47,6 +47,24 @@ class RAGSearch:
         prompt = f"""Summarize the following context for the query: '{query}'\n\nContext:\n{context}\n\nSummary:"""
         response = self.llm.invoke([prompt])
         return response.content
+    
+    def search_and_summarize_with_api_key(self, query: str, api_key: str, top_k: int = 5) -> str:
+        """
+        Same as search_and_summarize but uses a custom API key for this specific request.
+        This allows users to bypass rate limits by using their own Groq API key.
+        """
+        results = self.vectorstore.query(query, top_k=top_k)
+        texts = [r["metadata"].get("text", "") for r in results if r["metadata"]]
+        context = "\n\n".join(texts)
+        if not context:
+            return "No relevant documents found."
+        
+        # Create a temporary LLM instance with the custom API key
+        custom_llm = ChatGroq(groq_api_key=api_key, model_name=self.llm.model_name)
+        
+        prompt = f"""Summarize the following context for the query: '{query}'\n\nContext:\n{context}\n\nSummary:"""
+        response = custom_llm.invoke([prompt])
+        return response.content
 
 # Example usage
 if __name__ == "__main__":

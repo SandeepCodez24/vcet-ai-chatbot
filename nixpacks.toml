@@ -5,13 +5,18 @@
 providers = ["python"]
 
 [phases.setup]
-nixPkgs = ["python311Full", "gcc"]
+nixPkgs = ["python311Full", "gcc", "git-lfs"]
 
 [phases.install]
 cmds = [
+  # Railway's git clone doesn't reliably resolve LFS-tracked blobs (chroma_store/),
+  # so pull them explicitly before anything reads from that directory.
+  "git lfs install --local",
+  "git lfs pull",
   "python3 -m venv /opt/venv",
   "/opt/venv/bin/pip install --upgrade pip",
-  "/opt/venv/bin/pip install -r requirements.txt"
+  "/opt/venv/bin/pip install -r requirements.txt",
+  "/opt/venv/bin/python scripts/download_models.py"
 ]
 
 # Skip npm build
@@ -19,4 +24,4 @@ cmds = [
 cmds = []
 
 [start]
-cmd = "/opt/venv/bin/gunicorn server:app --bind 0.0.0.0:${PORT:-8080} --workers 1 --timeout 120"
+cmd = "/opt/venv/bin/gunicorn api.main:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:${PORT:-8080} --workers 1 --timeout 120"

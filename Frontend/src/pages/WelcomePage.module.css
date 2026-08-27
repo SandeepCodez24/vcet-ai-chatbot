@@ -1,0 +1,113 @@
+/* ============================================================
+   WelcomePage — Greeting / New Chat State (Screen 2)
+   Figma: large ✦ logo center + "Evening, Sandeep" + bottom input
+   ============================================================ */
+
+.page {
+  min-height: 100dvh;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  /* Stack: TopBar | grow hero center | BottomInputBar */
+}
+
+/* ── Hero center area ─────────────────────────────────────── */
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--stack-md);
+  padding: 0 var(--margin-mobile);
+  /* Slight push upward from absolute center for visual balance */
+  padding-bottom: 3rem;
+}
+
+/* ── Asterism logo — large coral pulse ────────────────────── */
+.logoWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: floatIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.logo {
+  color: var(--primary);           /* coral */
+  display: block;
+  /* Soft pulsing glow */
+  filter: drop-shadow(0 0 18px rgba(255, 181, 158, 0.25));
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: scale(0.7) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { filter: drop-shadow(0 0 14px rgba(255, 181, 158, 0.2)); }
+  50%       { filter: drop-shadow(0 0 28px rgba(255, 181, 158, 0.4)); }
+}
+
+/* ── Greeting text ────────────────────────────────────────── */
+.greeting {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 5vw, 1.875rem); /* ~30px */
+  font-weight: 500;
+  color: var(--on-surface);
+  text-align: center;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  animation: fadeUp 0.6s ease 0.25s both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Suggestion chips (optional quick prompts) ────────────── */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+  animation: fadeUp 0.6s ease 0.45s both;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.875rem;
+  border-radius: var(--radius-full);
+  background: var(--surface-container-high);
+  border: 1px solid var(--overlay-07);
+  font-family: var(--font-sans);
+  font-size: var(--text-label-md);
+  color: var(--on-surface-variant);
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.chip:hover {
+  background: var(--surface-bright);
+  color: var(--on-surface);
+  border-color: rgba(255, 181, 158, 0.2);
+}
+
+.chip:active {
+  transform: scale(0.96);
+}

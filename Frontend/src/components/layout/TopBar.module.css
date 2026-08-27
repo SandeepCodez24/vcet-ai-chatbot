@@ -1,0 +1,57 @@
+/* ============================================================
+   TopBar — Minimal navigation bar
+   Figma: hamburger ≡ (left) | optional title (center) | icon (right)
+   ============================================================ */
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem var(--margin-mobile);
+  /* No background — floats over the page */
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.iconBtn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--on-surface-variant);
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.iconBtn:hover {
+  background: var(--overlay-06);
+  color: var(--on-surface);
+}
+
+.iconBtn:active {
+  background: var(--overlay-10);
+  transform: scale(0.94);
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: var(--text-body-lg);
+  font-weight: 500;
+  color: var(--on-surface);
+  flex: 1;
+  text-align: center;
+}
+
+.rightGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}

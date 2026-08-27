@@ -1,0 +1,45 @@
+/* ============================================================
+   SendButton — White circular send button with ▶ arrow
+   ============================================================ */
+
+.btn {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 50%;
+  background: var(--on-surface);        /* cream-white */
+  color: var(--surface);                /* dark icon */
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+  -webkit-tap-highlight-color: transparent;
+  flex-shrink: 0;
+}
+
+.btn:hover {
+  background: var(--inverse-surface);
+  box-shadow: 0 4px 16px rgba(229, 226, 225, 0.15);
+}
+
+.btn:active {
+  transform: scale(0.93);
+}
+
+.btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Larger variant */
+.lg {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+}

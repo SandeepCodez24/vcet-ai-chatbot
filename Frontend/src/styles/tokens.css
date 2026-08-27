@@ -1,0 +1,214 @@
+/* ============================================================
+   VCET Bot — Design Tokens (Intellectual Noir)
+   Source: ChatBot_DESIGN.md
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600&family=Hanken+Grotesk:wght@400;500;600&display=swap');
+
+:root {
+  /* ── Backgrounds / Surfaces ─────────────────────────────── */
+  --surface:                   #131313;
+  --surface-dim:               #131313;
+  --surface-bright:            #393939;
+  --surface-container-lowest:  #0e0e0e;
+  --surface-container-low:     #1c1b1b;
+  --surface-container:         #20201f;
+  --surface-container-high:    #2a2a2a;
+  --surface-container-highest: #353535;
+  --background:                #131313;
+
+  /* ── Text ───────────────────────────────────────────────── */
+  --on-surface:          #e5e2e1;
+  --on-surface-variant:  #dbc1b9;
+  --inverse-surface:     #e5e2e1;
+  --inverse-on-surface:  #313030;
+
+  /* ── Brand / Primary (Coral / Burnt Orange) ─────────────── */
+  --primary:                #ffb59e;
+  --on-primary:             #5c1902;
+  --primary-container:      #d97757;
+  --on-primary-container:   #541400;
+  --inverse-primary:        #99462a;
+  --primary-fixed:          #ffdbd0;
+  --primary-fixed-dim:      #ffb59e;
+  --on-primary-fixed:       #390b00;
+  --on-primary-fixed-variant: #7a2f15;
+  --surface-tint:           #ffb59e;
+
+  /* ── Secondary ──────────────────────────────────────────── */
+  --secondary:              #c6c6c7;
+  --on-secondary:           #2f3131;
+  --secondary-container:    #454747;
+  --on-secondary-container: #b4b5b5;
+
+  /* ── Tertiary ───────────────────────────────────────────── */
+  --tertiary:               #c9c6c2;
+  --on-tertiary:            #31302d;
+  --tertiary-container:     #93928e;
+  --on-tertiary-container:  #2b2b28;
+
+  /* ── Error ──────────────────────────────────────────────── */
+  --error:            #ffb4ab;
+  --on-error:         #690005;
+  --error-container:  #93000a;
+  --on-error-container: #ffdad6;
+
+  /* ── Outlines ───────────────────────────────────────────── */
+  --outline:         #a38c85;
+  --outline-variant: #55433d;
+
+  /* ── Surface Variant ────────────────────────────────────── */
+  --surface-variant: #353535;
+
+  /* ── Typography ─────────────────────────────────────────── */
+  --font-serif: 'Source Serif 4', Georgia, serif;
+  --font-sans:  'Hanken Grotesk', system-ui, sans-serif;
+
+  /* Font sizes */
+  --text-display-lg:   2rem;       /* 32px */
+  --text-display-lg-m: 1.75rem;    /* 28px — mobile */
+  --text-headline-md:  1.5rem;     /* 24px */
+  --text-body-lg:      1.125rem;   /* 18px */
+  --text-body-md:      1rem;       /* 16px */
+  --text-label-md:     0.875rem;   /* 14px */
+  --text-label-sm:     0.75rem;    /* 12px */
+
+  /* Line heights */
+  --lh-display:  2.5rem;   /* 40px */
+  --lh-headline: 2rem;     /* 32px */
+  --lh-body-lg:  1.75rem;  /* 28px */
+  --lh-body-md:  1.5rem;   /* 24px */
+  --lh-label-md: 1.25rem;  /* 20px */
+  --lh-label-sm: 1rem;     /* 16px */
+
+  /* ── Border Radius ──────────────────────────────────────── */
+  --radius-sm:   0.5rem;    /*  8px */
+  --radius-md:   1rem;      /* 16px */
+  --radius-lg:   1.5rem;    /* 24px */
+  --radius-xl:   2rem;      /* 32px */
+  --radius-2xl:  3rem;      /* 48px */
+  --radius-full: 9999px;    /* pill */
+
+  /* ── Spacing ────────────────────────────────────────────── */
+  --space-1:  0.25rem;   /*  4px */
+  --space-2:  0.5rem;    /*  8px */
+  --space-3:  0.75rem;   /* 12px */
+  --space-4:  1rem;      /* 16px */
+  --space-5:  1.25rem;   /* 20px — mobile margin */
+  --space-6:  1.5rem;    /* 24px */
+  --space-8:  2rem;      /* 32px */
+  --space-10: 2.5rem;    /* 40px */
+  --space-12: 3rem;      /* 48px */
+
+  /* Semantic spacing */
+  --margin-mobile:  1.25rem;        /* page left/right padding */
+  --gutter:         1rem;
+  --stack-sm:       0.5rem;
+  --stack-md:       1rem;
+  --stack-lg:       2rem;
+  --inset-button:   0.75rem 1.5rem; /* button padding */
+  --inset-input:    1rem;           /* input padding */
+
+  /* ── Elevation / Tonal Layers ───────────────────────────── */
+  /* Level 0 — Canvas */
+  --layer-0: var(--surface);
+  /* Level 1 — Sidebar / Bottom bar */
+  --layer-1: var(--surface-container-low);
+  /* Level 2 — Inputs / Chips */
+  --layer-2: var(--surface-container-high);
+  /* Level 3 — Floating elements */
+  --layer-3: var(--surface-bright);
+
+  /* Subtle border (low-opacity white, no heavy shadows) */
+  --border-subtle: 1px solid rgba(255, 255, 255, 0.08);
+
+  /* Hover/border overlay steps — white-on-dark here, flipped to black-on-light below */
+  --overlay-05: rgba(255, 255, 255, 0.05);
+  --overlay-06: rgba(255, 255, 255, 0.06);
+  --overlay-07: rgba(255, 255, 255, 0.07);
+  --overlay-08: rgba(255, 255, 255, 0.08);
+  --overlay-10: rgba(255, 255, 255, 0.10);
+  --overlay-12: rgba(255, 255, 255, 0.12);
+
+  /* ── Transitions ────────────────────────────────────────── */
+  --transition-fast:   150ms ease;
+  --transition-base:   250ms ease;
+  --transition-slow:   400ms ease;
+}
+
+/* ============================================================
+   Light theme — same token names, "Daylight" counterpart of the
+   default dark palette above. Applied via <html data-theme="light">,
+   set from settingsStore (see Frontend/src/store/settingsStore.js).
+   ============================================================ */
+:root[data-theme='light'] {
+  /* ── Backgrounds / Surfaces ─────────────────────────────── */
+  --surface:                   #faf7f5;
+  --surface-dim:                #ded9d6;
+  --surface-bright:            #ffffff;
+  --surface-container-lowest:  #ffffff;
+  --surface-container-low:     #f5f0ee;
+  --surface-container:         #efe9e6;
+  --surface-container-high:    #e9e2df;
+  --surface-container-highest: #e3dbd8;
+  --background:                #faf7f5;
+
+  /* ── Text ───────────────────────────────────────────────── */
+  --on-surface:          #1f1b1a;
+  --on-surface-variant:  #52443e;
+  --inverse-surface:     #332f2d;
+  --inverse-on-surface:  #f8eeec;
+
+  /* ── Brand / Primary ────────────────────────────────────── */
+  --primary:                #99462a;
+  --on-primary:             #ffffff;
+  --primary-container:      #ffdbd0;
+  --on-primary-container:   #390b00;
+  --inverse-primary:        #ffb59e;
+  --primary-fixed:          #ffdbd0;
+  --primary-fixed-dim:      #ffb59e;
+  --on-primary-fixed:       #390b00;
+  --on-primary-fixed-variant: #7a2f15;
+  --surface-tint:           #99462a;
+
+  /* ── Secondary ──────────────────────────────────────────── */
+  --secondary:              #5d5e5f;
+  --on-secondary:           #ffffff;
+  --secondary-container:    #e2e2e3;
+  --on-secondary-container: #454747;
+
+  /* ── Tertiary ───────────────────────────────────────────── */
+  --tertiary:               #5e5b57;
+  --on-tertiary:            #ffffff;
+  --tertiary-container:     #e6e2dd;
+  --on-tertiary-container:  #2b2b28;
+
+  /* ── Error ──────────────────────────────────────────────── */
+  --error:            #ba1a1a;
+  --on-error:         #ffffff;
+  --error-container:  #ffdad6;
+  --on-error-container: #410002;
+
+  /* ── Outlines ───────────────────────────────────────────── */
+  --outline:         #837469;
+  --outline-variant: #d5c7bf;
+
+  /* ── Surface Variant ────────────────────────────────────── */
+  --surface-variant: #e3dbd8;
+
+  /* ── Elevation / Tonal Layers ───────────────────────────── */
+  --layer-0: var(--surface);
+  --layer-1: var(--surface-container-low);
+  --layer-2: var(--surface-container-high);
+  --layer-3: var(--surface-bright);
+
+  /* Subtle border (low-opacity black on a light surface) */
+  --border-subtle: 1px solid rgba(0, 0, 0, 0.08);
+
+  --overlay-05: rgba(0, 0, 0, 0.05);
+  --overlay-06: rgba(0, 0, 0, 0.06);
+  --overlay-07: rgba(0, 0, 0, 0.07);
+  --overlay-08: rgba(0, 0, 0, 0.08);
+  --overlay-10: rgba(0, 0, 0, 0.10);
+  --overlay-12: rgba(0, 0, 0, 0.12);
+}

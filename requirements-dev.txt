@@ -1,5 +1,10 @@
 flask>=3.0.0
 flask-cors>=4.0.0
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+pydantic-settings>=2.5.0
+ddgs
+sqlalchemy
 langchain
 langchain-core
 langchain-community

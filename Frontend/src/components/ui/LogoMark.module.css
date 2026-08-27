@@ -1,0 +1,43 @@
+/* ============================================================
+   LogoMark — The ✦ VCET brand mark
+   ============================================================ */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.icon svg {
+  display: block;
+}
+
+.wordmark {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--on-surface);
+  line-height: 1;
+}
+
+/* Size variants */
+.sm .wordmark { font-size: 1rem; }
+.sm .icon svg { width: 18px; height: 18px; }
+
+.md .wordmark { font-size: 1.25rem; }
+.md .icon svg { width: 22px; height: 22px; }
+
+.lg .wordmark { font-size: 1.75rem; }
+.lg .icon svg { width: 32px; height: 32px; }
+
+.xl .wordmark { font-size: 2.5rem; }
+.xl .icon svg { width: 48px; height: 48px; }

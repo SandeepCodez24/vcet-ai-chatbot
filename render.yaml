@@ -1,11 +1,11 @@
 services:
-  # Flask Backend with RAG
+  # FastAPI RAG backend (rag/ + api/)
   - type: web
     name: vcet-ai-backend
     env: python
     plan: free
     buildCommand: "pip install -r requirements-dev.txt"
-    startCommand: "gunicorn server:app"
+    startCommand: "gunicorn api.main:app -k uvicorn.workers.UvicornWorker"
     envVars:
       - key: GROQ_API_KEY
         sync: false

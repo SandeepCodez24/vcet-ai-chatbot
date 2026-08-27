@@ -1,0 +1,49 @@
+/* ============================================================
+   BottomInputBar — Anchored chat input with send button
+   Figma: dark pill input + white circle send button, bottom of screen
+   ============================================================ */
+
+.bar {
+  padding: 0.875rem var(--margin-mobile) 1.25rem;
+  background: var(--surface);
+  flex-shrink: 0;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  background: var(--surface-container-high);   /* #2a2a2a */
+  border-radius: var(--radius-full);
+  padding: 0.375rem 0.375rem 0.375rem 1.25rem;
+  border: 1px solid var(--overlay-06);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.inner:focus-within {
+  border-color: rgba(255, 181, 158, 0.25);
+  box-shadow: 0 0 0 3px rgba(255, 181, 158, 0.06);
+}
+
+.input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-sans);
+  font-size: var(--text-body-md);
+  color: var(--on-surface);
+  line-height: 1.5;
+  padding: 0.375rem 0;
+  caret-color: var(--primary);
+  /* Allow multi-line growth */
+  resize: none;
+  min-height: 24px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.input::placeholder {
+  color: var(--on-surface-variant);
+  opacity: 0.55;
+}

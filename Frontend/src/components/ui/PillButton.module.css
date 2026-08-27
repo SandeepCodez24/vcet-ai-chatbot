@@ -1,0 +1,84 @@
+/* ============================================================
+   PillButton — Pill-shaped CTA buttons
+   ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.9375rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: var(--text-body-md);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  border: none;
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast),
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Primary — Coral/Orange fill ──────────────────────────── */
+.primary {
+  background: var(--primary-container);   /* #d97757 coral */
+  color: var(--on-primary-container);     /* dark text */
+}
+
+.primary:hover:not(:disabled) {
+  opacity: 0.9;
+  box-shadow: 0 4px 20px rgba(217, 119, 87, 0.3);
+}
+
+/* ── Secondary / Ghost ────────────────────────────────────── */
+.secondary {
+  background: transparent;
+  color: var(--on-surface);
+  border: 1px solid var(--overlay-12);
+}
+
+.secondary:hover:not(:disabled) {
+  background: var(--overlay-05);
+}
+
+/* ── White / High-emphasis ────────────────────────────────── */
+.white {
+  background: var(--on-surface);   /* #e5e2e1 cream-white */
+  color: var(--surface);           /* dark text */
+}
+
+.white:hover:not(:disabled) {
+  opacity: 0.92;
+}
+
+/* ── Loading spinner ─────────────────────────────────────── */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.65s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

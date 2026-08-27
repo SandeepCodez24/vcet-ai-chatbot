@@ -1,0 +1,2156 @@
+
+================================================================================
+data/custom_dataset_build/Academics/Departments/SNH/pdfs\Chemistry_Patent.pdf  (1 pages, 1186 chars)
+================================================================================
+Velammal College of Engineering and Technology, Madurai – 625 009 
+(Autonomous) 
+Patents Details 
+Department of Chemistry 
+Academic Year 2024-2025 
+S. 
+No
+Categories 
+(Design/Utility)
+Title of the Invention 
+Application 
+Number 
+Filling 
+Date 
+Date of 
+Publication
+Status 
+1 
+Design 
+MICROREACTORS FOR 
+THE 
+SYNTHESIS 
+OF 
+NANOPARTICLES 
+6355651 
+28.03.2024
+11.04.2024 
+Published
+2 
+Design 
+ADVANCED 
+ELECTRODEPOSITION 
+METHOD 
+FOR 
+THE 
+CONTROLLED GROWTH 
+OF 
+ZNO 
+NANORODS 
+AND ZNO/CUO HYBRID 
+NANOSTRUCTURES 
+202441051451
+04.07.2024
+12.07.2024 
+Published
+3 
+Design 
+THE 
+ROLE 
+OF 
+PLATINUM 
+NANOPARTICLES 
+IN 
+COMBATTING 
+BACTERIAL 
+INFECTIONS 
+202441057218
+28.7.2024 
+02.08.2024 
+Published
+Academic Year 2023-2024 
+S. 
+No
+Categories 
+(Design/Utility)
+Title of the 
+Invention 
+Application 
+Number 
+Filling 
+Date 
+Date of 
+Publication
+Status 
+1 
+Design 
+COMPOSITION AND 
+METHODS 
+FOR 
+REMOVING HEAVY 
+METAL IONS FROM 
+WASTE 
+WATER 
+USING 
+FUNCTIONALIZED 
+GRAPHENE OXIDE 
+202341015463
+08.03.2023
+17.03.2023 
+Published 
+2 
+Design 
+NANO-FIBER-
+REINFORCED 
+GLASS 
+CERAMIC 
+MATRIX 
+COMPOSITES 
+FOR 
+ADVANCED 
+APPLICATIONS 
+202341060896
+11.09.2023
+16.10.2023 
+Published 
+ 
+ 
+HoD/Chemistry 
+
+
+================================================================================
+data/custom_dataset_build/Academics/Departments/SNH/pdfs\Chemistry_Publication.pdf  (5 pages, 9244 chars)
+================================================================================
+Velammal College of Engineering and Technology, Madurai – 625 009 
+(Autonomous) 
+Journal/Conference Publication Details 
+Department of Chemistry 
+Academic Year 2024-2025 
+S. 
+No 
+Name of the 
+Journal/ 
+Conference 
+Title of the Paper 
+Name of the 
+Author 
+SCI/SCOPUS/
+WoS/Google 
+Scholar 
+Date of 
+Publication 
+1 
+Luminescence 
+Investigation 
+on 
+the 
+Photodegradation 
+Performance 
+of 
+S‐Rich 
+g‐C3N4/MnO2 Composites 
+for Efficient Removal of 
+Hazardous 
+Dyes 
+From 
+Aqueous Phase 
+P Varun Prasath,  
+SM Muba Shera, 
+K Suganandam,  
+G Kalaiarasi, 
+S Sudhakar,  
+K Ravichandran, 
+A Kosiha 
+SCOPUS 
+ 
+10.06.2025 
+2 
+Journal 
+of 
+Nuclear 
+Materials 
+Synthesis of sulfur and 
+bromine 
+co-doped 
+bentonite-chitosan 
+composite hydrogels for 
+selective 
+adsorption 
+of 
+cobalt 
+and 
+strontium 
+radionuclides 
+B. Cha, 
+S SD Elanchezhiyan, 
+ K. Saravanakumar, 
+G. Jagan, Lewis  
+K. Njaramba,  
+M.  Jang,  
+Y. Yoon, 
+C. M. Park 
+SCOPUS 
+ 
+22.05.2025 
+3 
+Journal 
+of 
+Engineering 
+Education 
+Transformation
+s 
+Promoting 
+Learner 
+Autonomy in Generation-Z 
+Engineering Students: ICT 
+Needs and Perceptions of 
+the Learners 
+S, Obuliraj, 
+K, Nagarajan, 
+R, Chandran, 
+S,Sundararajan,  
+M. Muralisankar  
+SCOPUS 
+ 
+12.05.2025 
+4 
+Journal 
+of 
+Optics 
+Polar 
+and 
+non-polar 
+solvents induced nonlinear 
+optical characteristics of 
+natural dye extracted from 
+lawsonia inermis 
+S Daisylin Anbu 
+Sujitha, 
+S Lavanya,  
+Natarajan 
+Arumugam, 
+Abdulrahman 
+I Almansour, 
+S Jeyaram 
+SCOPUS 
+ 
+30.04.2025 
+5 
+Journal 
+of 
+Industrial 
+and 
+Engineering 
+Chemistry 
+Utilization of waste PET-
+derived 
+metal–organic 
+framework 
+grafted 
+polyaniline composite for 
+heavy 
+metal 
+adsorption 
+from aqueous solution 
+D. Kim, 
+P. Kalimuthu,  
+Sun-Mi Lee,  
+Jinho Jung, 
+ S.S.D Elanchezhiyan 
+SCOPUS 
+ 
+25.04.2025 
+6 
+Separation and 
+Purification 
+Technology 
+Bimetallic oxide integrated 
+chitosan 
+matrix 
+for 
+adsorption 
+coupled 
+R. Priyadharshini,  
+S SD Elanchezhiyan 
+Subbaiah 
+Muthu 
+SCOPUS 
+ 
+22.04.2025 
+reduction of Cr (VI) from 
+aqueous solution 
+Prabhu,  
+S. Meenakshi 
+7 
+New Journal of 
+Chemistry 
+Highly 
+sensitive 
+electrochemical 
+detection 
+of monosodium glutamate 
+and nitrite on a binary 
+metal 
+(FeZnO) 
+nanocomposite 
+R. Mayildurai, 
+S. Mahalakshmi, 
+T. 
+Maruthavanan, 
+K. 
+Karthikeyani 
+Vijayakumari, 
+R. Priya, 
+M. Ramesh, 
+C Sankar
+SCOPUS 
+ 
+10.04.2025 
+8 
+International 
+Journal 
+of 
+Biological 
+Macromolecule
+s 
+Synthesis of zirconium-
+based 
+metal-organic 
+framework/gelatin aerogel 
+for removing phosphate 
+and fluoride from aqueous 
+solutions 
+H. Kim, B. Cha, 
+Seong-Nam 
+Nam, 
+Y. Yoon, 
+ Hye-Jin Hong,  
+S SD Elanchezhiyan,  
+C. M. Park 
+SCOPUS 
+ 
+01.03.2025 
+9 
+Ceramics 
+International 
+Shock 
+wave 
+pulsed 
+strategy 
+on 
+green 
+synthesized nickel oxide 
+nanoparticles: 
+Structural, 
+morphological, 
+and 
+electrochemical 
+performance 
+S. Ashok Kumar,  
+S. 
+S. 
+Rajkumar 
+Inbanathan, 
+R. Babhu Vignesh, 
+D. R. Rosaline, 
+B.R. Kamalam, 
+A. Umar,  
+Ahmed A Ibrahim, 
+S. Akbar,  
+SA Martin Britto 
+Dhas,  
+S. Baskoutas 
+SCOPUS 
+ 
+ 
+ 
+01.02.2025 
+11 
+Current 
+Research 
+in 
+Nutrition 
+& 
+Food Science 
+Bioactive Components in 
+Functional 
+Foods, 
+Mechanism of Action and 
+Impacts on Health with a 
+Focus 
+on 
+COVID-19-A 
+Review. 
+R. Chandran,  
+S.Obuliraj, 
+S.Sundararajan, 
+S. Baskaran, 
+M. Muralisankar 
+SCOPUS 
+01.12.2024 
+12 
+New Journal of 
+Chemistry 
+ZnZrO2-adorned graphitic 
+carbon nitride (g-C3N4) on 
+a laser-induced graphene 
+electrode 
+as 
+an 
+electrochemical sensor for 
+the 
+detection 
+of 
+ractopamine 
+in 
+meat 
+samples 
+R 
+Ganapathi 
+Raman,  
+M 
+Muhammed 
+Shameem,  
+P Kavitha,  
+C Sankar,  
+SR Kalaivani 
+SCOPUS 
+14.10.2024 
+13
+Journal of the 
+Iranian 
+Chemical 
+Society 
+Synthesis, characterization 
+and 
+anti-microbiological 
+evaluation of 2-[(2, 6-
+diaryl 
+piperidin-4-yl) 
+hydrazono]-2, 
+3-
+dihydrothiazoles as a new 
+N Sarathi, 
+SL Ashok Kumar, 
+C Sankar 
+SCOPUS 
+09.09.2024 
+class 
+of 
+antimicrobial 
+agents 
+14 
+ 
+Journal 
+of 
+Molecular 
+Liquids 
+Development 
+of 
+a 
+surfactant-assisted 
+lanthanum 
+anchored 
+hydroxyapatite@ 
+polyaniline 
+hybrid 
+composite 
+for 
+the 
+elimination of chromium 
+ions from aqueous solution 
+R Priyadharshini, 
+S SD Elanchezhiyan,  
+K Ramkumar,  
+S Meenakshi 
+SCOPUS 
+01.09.2024 
+Academic Year 2023-2024 
+S. 
+No 
+Name of the 
+Journal/ 
+Conference 
+Title of the Paper 
+Name of the 
+Author 
+SCI/SCOPUS/
+WoS/Google 
+Scholar 
+Date of 
+Publication 
+1 
+ 
+Journal 
+of 
+Materials 
+Science: 
+Materials 
+in 
+Electronics 
+Investigations on Mo dye-
+doped PPLT single crystals 
+for 
+possible 
+non-linear 
+optical applications 
+K Savitha, 
+K Saravanan, 
+K Suganandam 
+SCOPUS 
+06.04.2024 
+2 
+International 
+Journal 
+of 
+Biological 
+Macromolecule
+s 
+Synthesis of silver‑bismuth 
+oxide 
+encapsulated 
+hydrazone 
+functionalized 
+chitosan 
+(AgBi2O3/FCS) 
+nanocomposite 
+for 
+electrochemical sensing of 
+glucose, 
+H2O2 
+and 
+Escherichia coli O157:H7 
+M Ramesh, 
+S Umamatheswari, 
+PM Vivek, 
+C Sankar, 
+R Jayavel 
+SCOPUS 
+01.04.2024 
+3 
+Journal 
+of 
+Environmental 
+Chemical 
+Engineering 
+Efficient interfacial charge 
+transfer 
+of 
+hierarchical 
+crinkled (2D/2D) Ti3C2Tx 
+MXene 
+assembled 
+on 
+perforated 
+GO 
+heterojunction 
+for 
+enhanced degradation of 
+organic dye 
+S. 
+Vigneshwaran, 
+P. Sirajudheen,  
+R. Babhu Vignesh, 
+Do-Gun 
+Kim, 
+Seok-Oh Ko 
+SCOPUS 
+01.04.2024 
+4 
+Journal 
+of 
+Chemical 
+Health Risks 
+Orange Peel as a Green 
+Adsorbent for Wastewater 
+Treatment 
+Jeevalatha 
+Rugmangathan, 
+Rajabhuvaneswari  
+Ariyamuthu, 
+Dhanam. 
+N, 
+Lavanya S
+SCOPUS 
+06.03.2024 
+5 
+Chemistry 
+Select 
+Design, 
+Synthesis, 
+and 
+Anticancer Activity of N‐1 
+Terminal Segment of α‐(2, 
+5, 
+7‐Tri‐tert‐butylindol‐3‐yl) 
+alanine‐Incorporated Short 
+R.Krishnamoorthy, 
+M.Singh, 
+P.Anaikutti,  
+M. C. Pavar,  
+E. Selvaraj,  
+S. Rajagopal, 
+SCOPUS 
+05.03.2024 
+Peptides 
+R.Babhu Vignesh
+6 
+ACS 
+Applied 
+Nano Materials 
+Sonochemical Synthesis of 
+Ag-Functionalized Fe2O3 
+Nanocomposites for the 
+Highly 
+Sensitive 
+Electrochemical Detection 
+of Ractopamine and H2O2 
+M Ramesh,  
+S Umamatheswari, 
+C Sankar, 
+ R Jayavel 
+SCOPUS 
+22.01.2024 
+7 
+Carbon-Based 
+Nanomaterials 
+in Biosystems 
+Toxicological analysis of 
+carbon-based 
+nanomaterials 
+in 
+food 
+industry applications 
+M Muralisankar, 
+S. Soundeswaran,  
+P. Bothi Raja,  
+O. Senthilkumar 
+SCOPUS 
+11.01.2024 
+8 
+New Journal of 
+Chemistry 
+Zn@ ZrO2 nanoparticles 
+decorated 
+on 
+naringin-
+based 
+sensor 
+for 
+electrochemical 
+detection 
+of p-nitrophenol and o-
+nitrophenol 
+M. Ramesh 
+S. Umamatheswari 
+C. Sankar  
+R. Jayavel  
+SCOPUS 
+ 
+10.01.2024 
+9 
+Journal 
+of 
+Chemical 
+Health Risks 
+An eco-friendly method for 
+preventing 
+corrosion 
+in 
+low-carbon steel using an 
+extract 
+from 
+Guazma 
+tomentosa leaves 
+Jeevalatha 
+Rugmangathan, 
+Rajabhuvaneswai 
+Ariyamuthu, 
+Lavanya S
+SCOPUS 
+06.12.2023 
+10 
+European 
+Chemical 
+Bulletin 
+An integration of IOT and 
+sensor 
+model 
+for 
+measuring oxygen content 
+and purity in water 
+Madhusudana 
+T 
+Ranjit Kumar Puse, 
+S.T.Deepa, 
+M.Arun,  
+R.Arun Chakravarthy 
+K. Suganandam
+SCOPUS 
+05
+
+================================================================================
+data/custom_dataset_build/Academics/Departments/SNH/pdfs\English_MoU.pdf  (1 pages, 1103 chars)
+================================================================================
+Velammal College of Engineering and Technology, Madurai – 625 009 
+(Autonomous) 
+MoU Details 
+Department of English 
+Academic Year 2024-2025 
+S. 
+No 
+Name of the Industry 
+with Address 
+MoU Signed 
+Date/Duration 
+Scope of MoU 
+Outcomes of MoU 
+1 
+Goethe- Institute/Max 
+Mueller Bhavan, 4, Rutland 
+Gate street, Chennai 
+600006 
+02/02/2024 
+To offer German 
+Language training to the 
+interested students of 
+VCET 
+One batch of students 
+has learnt A1 level. 
+ 
+ 
+Academic Year 2023-2024 - NIL 
+ 
+Academic Year 2022-2023 - NIL 
+ 
+Academic Year 2021-2022 
+S. 
+No 
+Name of the Industry 
+with Address 
+MoU Signed 
+Date/Duration 
+Scope of MoU 
+Outcomes of MoU 
+1 
+Globethics. Net, 150, Route 
+de Ferney, CH- 1211 
+Geneva 2, Switcherland. 
+20/05/2021 
+Getting support to 
+convene International 
+FDPs and Conferences. 
+A 2-day International 
+conference 
+was 
+convened from 26th 
+to 27th March 2024 
+with 
+resource 
+persons and zoom 
+support 
+by 
+Globethics. 
+A 
+5- 
+day 
+International 
+FDP 
+was convened from 
+22nd to 28th Feb 2025 
+with 
+resource 
+persons and zoom 
+support.  
+ 
+Academic Year 2020-2021 - NIL 
+
+
+================================================================================
+data/custom_dataset_build/Academics/Departments/SNH/pdfs\English_Patent.pdf  (2 pages, 1170 chars)
+================================================================================
+Velammal College of Engineering and Technology, Madurai – 625 009 
+(Autonomous) 
+Patents Details 
+Department of ENGLISH 
+Academic Year 2024-2025 
+S. 
+No 
+Categories 
+(Design/Utility) 
+Title of the 
+Invention 
+Application 
+Number 
+Filing 
+Date 
+Date of 
+Publication 
+Status 
+1 
+Utility 
+Technology 
+mediated 
+communication: 
+Effects of 
+relationship building 
+and trust 
+202441060613 -
+A 
+10.08.2024 
+23.08.2024 
+Published 
+2 
+Utility 
+Developing 
+Effective 
+Communication 
+skills for leadership 
+in multinational 
+teams 
+202441057897 - 
+A 
+31.07.2024 
+02.08.2024 
+Published 
+3 
+Utility 
+Enhancing 
+Engagement in 
+informal Digital 
+English learning 
+among EFL learners 
+in Higher education 
+through the roles of 
+resilience and flow 
+202531055770-
+A 
+10.06.2025 
+10.07.2025 
+Published 
+4 
+Utility 
+Vehicle driver 
+drowsiness detection 
+device 
+437072-001 
+12.11.2024 
+12.12.2024 
+Published 
+ 
+Academic Year 2023-2024 - NIL 
+ 
+Academic Year 2022-2023- NIL 
+ 
+Academic Year 2021-2022 - NIL 
+ 
+Academic Year 2020-2021 -NIL 
+ 
+ 
+ 
+                                                                                                                                   HoD/English 
+
+
+================================================================================
+data/custom_dataset_build/Academics/Departments/SNH/pdfs\English_Publication.pdf  (1 pages, 632 chars)
+================================================================================
+Velammal College of Engineering and Technology, Madurai – 625 009 
+(Autonomous) 
+Journal/Conference Publication Details 
+Department of  ENGLISH 
+Academic Year 2024-2025 
+S. 
+No 
+Name of the 
+Journal/ 
+Conference 
+Title of the 
+Paper 
+Name of the 
+Author 
+SCI/SCOPUS/ 
+WoS/Google 
+Scholar 
+Date of 
+Publicatio
+n 
+1 
+IGI GLOBAL 
+Neural 
+Networks and 
+Graph Models 
+for Traffic and 
+Energy Systems 
+Dr.M.V. 
+Arumugam 
+SCOPUS (Indexed) 
+02.03.2025 
+2 
+Journal of 
+Engineering 
+Education 
+Transformations 
+Evaluation of 
+Student 
+Preference for 
+Printed Books 
+and E-books : A 
+quantitative 
+study 
+Ms. V.Praveena 
+SCOPUS 
+01.07.2024 
+ 
+
+
+================================================================================
+data/custom_dataset_build/Academics/Departments/SNH/pdfs\Maths_Patent.pdf  (2 pages, 1305 chars)
+================================================================================
+Velammal College of Engineering and Technology, Madurai – 625 009 
+(Autonomous) 
+Patents Details 
+Department of Mathematics 
+Academic Year 2024-2025 
+S. 
+No 
+Categories 
+(Design/Utility) 
+Title of the 
+Invention 
+Application 
+Number 
+Filing 
+Date 
+Date of 
+Publication 
+Status 
+1 
+Design 
+Developing 
+Hybrid 
+Quantum 
+modules for 
+IoT 
+Applications 
+in smart cities. 
+202421103545 
+27.12.2024 
+24.01.2025 
+Granted 
+2 
+Design 
+AI-Powered 
+ID card 
+Verification 
+System for 
+Controlled  
+Access in 
+Schools and 
+Colleges  
+202541005786 
+24.01.2025 
+31.01.2025 
+Granted 
+3 
+Design 
+Mental 
+Wellness 
+Monitoring 
+Device 
+6396545 
+09.10.2024 
+18.10.2024 
+Granted 
+ 
+ 
+Academic Year 2023-2024 
+S. 
+No 
+Categories 
+(Design/Utility) 
+Title of the 
+Invention 
+Application 
+Number 
+Filing 
+Date 
+Date of 
+Publication 
+Status 
+ 
+ 
+ 
+1 
+ 
+ 
+ 
+Design 
+Hybrid Fixed 
+Point-Theoretic 
+models for 
+Robust 
+Differentiation 
+and Integration 
+in multi 
+dimensional 
+202341064058 A 24.09.2023 
+06.10.2023 
+Published 
+spaces 
+2 
+Design 
+Artificial 
+Intelligence and 
+Internet of 
+Things 
+Technology 
+through 
+differential 
+equations in the 
+Development 
+of Stable and 
+Resilent Smart 
+Grids with 
+High 
+Penetration of 
+Renewable 
+Energy Sources 
+and 
+Management 
+System 
+202441004908 
+03.12.2024 
+09.02.2024 
+Published 
+ 
+ 
+ 
+
+
+================================================================================
+data/custom_dataset_build/Academics/Departments/SNH/pdfs\Maths_Publication.pdf  (4 pages, 4667 chars)
+================================================================================
+ Velammal College of Engineering and Technology, Madurai – 625 009 
+(Autonomous) 
+Journal/Conference Publication Details 
+Department of MATHEMATICS 
+Academic Year 2024-2025 
+S. 
+No 
+Name of the 
+Journal/ 
+Conference 
+Title of the Paper 
+Name of the Author 
+SCI/SCOPUS 
+WoS / Google 
+Scholar 
+Date of 
+Publication 
+1 
+Networking, 
+Transport and 
+Quality of service 
+in Vehicular 
+Networks  
+Explainable Artificial 
+Intelligence and Fuzzy 
+mcdm Approach in 
+Location selection of 
+Roadside units in 
+Vehicular Networks 
+with Economic 
+Efficiency 
+Dr.A.P.Pushpalatha 
+SCOPUS 
+ 
+ 
+27May, 2025 
+2 
+Networking, 
+Transport and 
+Quality of service 
+in Vehicular 
+Networks 
+Strategic Integration 
+of WASPAS Method 
+for Effective Traffic 
+Management and 
+Congestion Control 
+Dr.A.P.Pushpalatha 
+SCOPUS 
+ 
+27May, 2025 
+3 
+Journal of 
+Engineering 
+Education 
+Transformations  
+An Investigation on 
+the Lasting Impact of 
+COVID-19 on Hope, 
+Gratitude, and 
+Forgiveness of 
+College Students' 
+Wellbeing 
+Dr.A.P.Pushpalatha 
+SCOPUS 
+ 
+ 
+October 2024 
+4 
+International 
+Journal of 
+Neutrosophic 
+Science 
+ 
+Enhancing Inventory 
+Management through 
+Advanced 
+Technologies and 
+Mathematical 
+Methods: Utilizing 
+Neutrosophic Fuzzy 
+Logic 
+Dr.A.P.Pushpalatha 
+SCOPUS 
+ 
+ 
+2024 
+5 
+Journal of 
+Mechanics of 
+Continua and 
+Mathematical 
+Sciences 
+Special Graphs And 
+Their Zagreb 
+Indices: A 
+Comparative Study 
+Dr.A.P.Pushpalatha 
+SCOPUS 
+2024 
+6 
+International 
+Journal of 
+Neutrosophic 
+Science 
+ 
+ 
+ 
+Optimization of 
+Neutrosophic EOQ 
+Model for Effective 
+Demand Management 
+in Uncertain 
+Environment Using 
+Genetic 
+Optimization 
+ 
+Dr.A.P.Pushpalatha 
+   SCOPUS 
+ 
+ 
+ 
+ 
+ 
+ 
+2024 
+7 
+ 
+Neutrosophic Sets 
+and Systems 
+An application of site 
+selection for solid 
+waste management 
+system using 
+Neutrosophic set 
+Mr. K. Pitchaimani 
+SCOPUS 
+May 2025 
+8 
+Proceedings of 
+the International 
+Conference on 
+Multi-Agent 
+Systems for 
+Collaborative 
+Intelligence 
+Multi-Modal Deep 
+Learning for User-
+Centric Car 
+Recommendations 
+Dr.S.Balamurugan 
+SCOPUS 
+ 
+ 
+04.03.2025 
+9 
+Proceedings of 
+the International 
+Conference on 
+Sustainable 
+Expert Systems 
+Resilient Framework 
+for Next-Generation 
+Heterogeneous 
+Wireless Networks in 
+Disaster 
+Management 
+Dr.S.Balamurugan 
+SCOPUS 
+ 
+ 
+24.01.2025 
+10 
+2024 Second 
+International 
+Conference on 
+Inventive 
+Computing and 
+Informatics 
+Adaptive Deep 
+Ensemble Learning for 
+Robust 
+Network Intrusion 
+Detection in Industrial 
+IoT 
+Networks 
+Dr.S.Balamurugan 
+SCOPUS 
+ 
+ 
+04.11.2024 
+11 
+Proceedings of 
+the International 
+Conference on I-
+SMAC (IoT in 
+Social, Mobile, 
+Analytics and 
+Cloud) 
+A Machine Learning 
+Framework for 
+Integrating 
+Multi-Omics Data for 
+Early Leukemia 
+Detection 
+Dr.S.Balamurugan 
+SCOPUS 
+ 
+ 
+28.10.2024 
+12 
+Proceedings of 
+the 7th 
+ForeScanGuard: 
+Proactive Monitoring 
+and 
+ 
+ 
+ 
+International 
+Conference on 
+Inventive 
+Computation 
+Technologies 
+Detection for 
+Sustainable Forest 
+Conservation 
+ 
+Dr.S.Balamurugan 
+ 
+SCOPUS 
+ 
+17.07.2024 
+13 
+Proceedings of 
+the International 
+Conference on 
+Sustainable 
+Communication 
+Networks and 
+Application 
+(ICSCNA-2024), 
+IEEE Xplore 
+Adaptive Movie 
+Recommendations: A 
+Deep Learning 
+Framewok with Mood 
+and sentiment 
+Integration 
+Dr.M.Sornavalli 
+SCOPUS 
+ 
+ 
+ SEP 2025 
+14 
+Proceedings of 
+the International 
+Conference on 
+Multi-Agent 
+Systems for 
+Collaborative 
+Intelligence 
+(ICMSCI-2025) , 
+IEEE Xplore   
+A Hybrid Machine 
+Learning Approach for 
+Top-N Bike 
+Recommendations 
+Dr.M.Sornavalli 
+SCOPUS 
+ 
+ 
+ 
+APRIL 2025 
+15 
+International 
+Journal of 
+Neutrosophic 
+Science 
+A Computationally  
+Efficient Topologized 
+Graphical  Method for 
+Neutrosophic  
+Transportation 
+Optimization; Cost 
+Minimization, 
+Performance Metrics, 
+and Python 
+Implementation 
+Dr.V.Dhanasekaran 
+ 
+SCOPUS 
+ 
+ 
+ 
+APRIL 2025 
+16 
+Neutrosophic Sets 
+and Systems 
+A Hybrid MAGDM 
+Approach of 
+Neutrosophic TOPSIS 
+-LINMAP method for 
+developing Enterprise 
+Selection Criteria 
+Dr.M.Sivanandha 
+Saraswathy 
+SCOPUS 
+ 
+APRIL 2025 
+17 
+Journal of 
+Mechanics of 
+Continua and 
+Mathematical 
+Sciences 
+Special 
+Graphs 
+And 
+Their Zagreb Indices: A 
+Comparative Study 
+   Mrs. S.Suganthi 
+SCOPUS 
+ 
+2024 
+ 
+ 
+ 
+Academic Year 2020-2021 
+S. 
+No 
+Name of the 
+Journal/ 
+Conference 
+Title of the 
+Paper 
+Name of the 
+Author 
+SCI/SCOPUS/ 
+WoS/Google 
+Scholar 
+Date of 
+Publication 
+17 
+Palestine Journal Of 
+Mathematics 
+Common fixed 
+point theorems 
+for weakly 
+compatible 
+mappings in 
+intuitionistic 
+generalized 
+fuzzy metric 
+spaces 
+Dr.M.Sornavalli 
+SCOPUS 
+ 
+ 
+ 
+APR 2020 
+18 
+Utilitas Mathematica  
+Star domination 
+star irredundant 
+in graphs 
+Dr.S.Karthikeyan 
+Scopus 
+June 2020 
+ 
+ 
+
+
+================================================================================
+data/custom_dataset_build/Academics/Departments/SNH/pdfs\Physics_Patent.pdf  (2 pages, 1710 chars)
+================================================================================
+Velammal College of Engineering and Technology, Madurai – 625 009 
+(Autonomous) 
+Patents Details 
+Department of Physics 
+Academic Year 2024-2025 
+ 
+S. 
+No 
+Categories 
+(Design/Utility) 
+Title of the 
+Invention 
+Application 
+Number 
+Filling Date 
+Date of 
+Publication 
+Status 
+1 
+Design 
+Micro Reactor 
+for Nano Particle 
+Synthesis 
+(Mr. V. Prasanna 
+Venkatesh) 
+6388398 
+03/09/2024 
+11/09/2024 
+Published 
+2 
+Design 
+Nano Scale 
+Biosensor for 
+Early Detection 
+of Alzheimer’s 
+Disease 
+Biomarkers 
+ 
+(Dr. B.K. 
+Balachandar) 
+202441065431 
+29/08/2024 
+13/09/2024 
+Awaiting 
+Request for 
+Examination 
+ 
+3 
+Design 
+Efficient NiO-
+Based 
+Nanostructures 
+for Solar-Driven 
+Water Splitting 
+and Pollutant 
+Degradation 
+ 
+(Dr. R. 
+Jothilakshmi) 
+202441072011 
+24/09/2024 
+04/10/2024 
+Awaiting 
+Request for 
+Examination 
+ 
+4 
+Design 
+A wireless 
+Sensor Network 
+system for 
+Patient 
+movement and 
+vital monitoring 
+in hospitals 
+ 
+(Dr. R. 
+Jothilakshmi) 
+2024110619 
+14/08/2024 
+ 
+13/12/2024 
+Awaiting 
+Request for 
+Examination 
+ 
+5 
+Design 
+Next-Generation 
+Nanoparticles in 
+Cancer 
+Diagnosis and 
+Therapeutics. 
+Application 
+Number 
+ 
+(Dr. D. Madhan) 
+202541001615 
+ 
+ 
+07/01/2025 
+ 
+10/01/2025 
+ 
+Awaiting 
+Request for 
+Examination 
+ 
+6 
+Design 
+Semiconductor 
+Composite 
+Photo catalysis 
+Device 
+ 
+(Dr. D. Madhan) 
+444748-001 
+19/01/2025 
+09/04/2025 
+Published 
+ 
+Academic Year 2023-2024 
+ 
+S. 
+No 
+Categories 
+(Design/Utility) 
+Title of the 
+Invention 
+Application 
+Number 
+Filling Date 
+Date of 
+Publication 
+Status 
+1 
+Utility 
+Method for large 
+scale production 
+of high quality 
+graphene using 
+CVD 
+(Mr. V. Prasanna 
+Venkatesh) 
+202341055697 
+20/08/2023 
+01/09/2023 
+Awaiting 
+Request for 
+Examination 
+ 
+ 
+
+
+================================================================================
+data/custom_dataset_build/Academics/Departments/SNH/pdfs\Physics_Publication.pdf  (9 pages, 8933 chars)
+================================================================================
+Velammal College of Engineering and Technology, Madurai – 625 009 
+(Autonomous) 
+Journal/Conference Publication Details 
+Department of Physics 
+Academic Year 2024-2025 
+S. 
+No 
+Name of the 
+Journal/ 
+Conference 
+Title of the Paper 
+Name of the 
+Author 
+SCI/SCOPUS/ 
+WoS/Google 
+Scholar 
+Date of 
+Publication 
+1 
+Optical and 
+Quantum 
+Electronics 
+Crystallographic, 
+structural, and 
+electrical 
+characteristics of a 
+new molybdate 
+crystalline phase 
+within the NaNbO3-
+BaNb2O6-
+MoO3 system 
+Dr. R. Rajesh 
+Scopus 
+20/07/2024 
+2 
+European Journal 
+of Inorganic 
+Chemistry 
+Magnetocaloric 
+Analysis of Novel 
+Polycrystalline 
+Sm0.5Sr0.4Nd0.1Mn
+1-xTixO3(0 ≤ x ≤ 
+0.2) that Correlates 
+Structural and 
+Magnetic Properties 
+ 
+ 
+ 
+ 
+Dr. R. Rajesh 
+ 
+ 
+ 
+ 
+Scopus 
+ 
+ 
+ 
+ 
+11/09/2024 
+3 
+Journal of 
+Materials Science: 
+Materials in 
+Electronics 
+Effect of Ca and Nb 
+co-doping on optical 
+and magnetoelectric 
+properties 
+of polycrystalline 
+BiFeO3 
+Dr. R. Rajesh 
+Scopus 
+20/09/2024 
+4 
+Discover Applied 
+Sciences 
+Electron density 
+analysis of 
+Bi0.95Ca0.05Fe1-xNbxO
+3(x=0.02, 0.04, 0.06) 
+samples that correlate 
+microstructural, 
+optical and magnetic 
+properties 
+Dr. R. Rajesh 
+Scopus 
+12/04/2025 
+5 
+African Journal of 
+Biological 
+Sciences 
+Synthesis and 
+characterization of 
+WO3-few layer 
+graphene 
+nanocomposite for 
+Mr. V. Prasanna 
+Venkatesh 
+Scopus 
+25/08/2024 
+antibacterial and 
+anticancer 
+applications 
+6 
+Solid State 
+Sciences 
+Synthesis and 
+characterization of 
+WO3-GO 
+nanocomposite for 
+hydrogen storage, 
+electrochemical, 
+antibacterial and 
+anticancer 
+applications 
+Mr. V. Prasanna 
+Venkatesh 
+Scopus 
+19/11/2024 
+7 
+Next Materials 
+Investigation of 
+MnO2/MWCNTs 
+nanocomposite for 
+various applications 
+Mr. V. Prasanna 
+Venkatesh 
+Scopus 
+04/01/2025 
+8 
+Chemical Physics 
+Letters 
+Hydrothermal 
+synthesis of 
+NiCo2O4 Nanorods: 
+A promising 
+electrode material for 
+supercapacitors with 
+enhanced capacitance 
+and stability 
+Mr. V. Prasanna 
+Venkatesh 
+Scopus 
+13/03/2025 
+9 
+Solid State 
+Communications 
+Investigation of 
+antibacterial and 
+anticancer activities 
+of WO3 
+nanostructures 
+Mr. V. Prasanna 
+Venkatesh 
+Scopus 
+23/04/2025 
+10 
+Inorganic 
+Chemistry 
+Communications 
+Phytofabrication of 
+MgO NPs wrapped 
+on exfoliated g-C3N4 
+for anti-oxidant, 
+antimicrobial 
+degradation of toxic 
+contaminants in water 
+bodies 
+Dr. D. Madhan 
+Scopus 
+29/10/2024 
+11 
+Ionics 
+CoAl-LDH 
+incorporated g-C3N4 
+nanosheets: a dual-
+function 
+photocatalyst for 
+hydrogen production 
+and dye degradation 
+Dr. D. Madhan 
+Scopus 
+10/05/2025 
+12 
+Applied Physics A 
+Boosting of bio 
+bacterial inactivation 
+and properties of 
+Dr. B.K. 
+Balachandar 
+Scopus 
+ 
+ 
+morphology tuned 
+carbon anchored ZnO 
+films 
+22/05/2025 
+13 
+Inorganic 
+Chemistry 
+Communications 
+ 
+Photochemical 
+synthesis of gold 
+nanoprisms decorated 
+reduced graphene 
+oxide for 
+electrochemical 
+sensing of bovine 
+serum albumin 
+Dr. R. 
+Jothilakshmi 
+Scopus 
+ 
+ 
+12/12/2024 
+14 
+Eksplorium-
+Buletin Pusat 
+Teknologi Bahan 
+Galian Nuklir 
+Development of 
+Smart Materials with 
+Tunable Mechanical 
+Properties for 
+Wearable Devices 
+Dr. R. 
+Jothilakshmi 
+WoS 
+ 
+01/05/2025 
+15 
+Results in 
+Engineering 
+Green synthesis of 
+ultrafine zinc oxide 
+nanoparticles for 
+photocatalytic 
+degradation of 
+methylene blue dye: 
+Optimization and 
+kinetic studies 
+Dr. R. 
+Jothilakshmi 
+Scopus 
+ 
+ 
+17/03/2025 
+16 
+International 
+Journal of 
+Quantum 
+Chemistry 
+DFT Computation, 
+Spectroscopic, 
+Hirshfeld Surface, 
+Docking and 
+Topological Analysis 
+on 
+2,2,5-Trimethyl-1,3-
+Dioxane-5-carboxylic 
+Acid as Potent Anti-
+Cancer Agent 
+Dr. S. Saranya 
+Scopus 
+ 
+ 
+ 
+29/10/2024 
+ 
+Academic Year 2023-2024 
+S. 
+No 
+Name of the 
+Journal/ 
+Conference 
+Title of the 
+Paper 
+Name of the 
+Author 
+SCI/SCOPUS/ 
+WoS/Google 
+Scholar 
+Date of 
+Publication 
+1 
+ 
+Phase Transitions 
+Octahedra tilt 
+influencing 
+physical 
+properties of 
+Dr. R. Rajesh 
+Scopus 
+ 
+ 
+06/06/2023 
+polycrystalline 
+Bi0.9Co0.1FeO3 c
+eramics 
+2 
+Applied Physics A 
+Molecular 
+design of 
+BiFeO3 via 
+novel 
+substitution by 
+zirconium and 
+erbium for 
+tuning the 
+multifunctional 
+properties and 
+band structure 
+calculations 
+Dr. R. Rajesh 
+Scopus 
+ 
+ 
+ 
+ 
+12/07/2023 
+3 
+ 
+Journal of 
+Superconductivity 
+and Novel 
+Magnetism 
+ 
+Tuning the 
+Multiferroism 
+and 
+Magnetoelectric 
+coupling of 
+Bismuth Ferrite 
+via 
+Substitutional 
+Defects by Er 
+and Transition 
+Metals 
+(Nb/Zr/Y) 
+Dr. R. Rajesh 
+Scopus 
+ 
+ 
+ 
+ 
+29/08/2023 
+4 
+Physica B: 
+Condensed Matter 
+Facile dip-
+coating assisted 
+preparation of 
+reduced 
+graphene oxide-
+copper oxide 
+nanocomposite 
+thin films on 
+aluminum 
+substrate for 
+solar selective 
+absorber 
+Mr. V. Prasanna 
+Venkatesh,  
+Dr. 
+B.K.Balachandar 
+Scopus 
+ 
+ 
+ 
+ 
+15/11/2023 
+5 
+Macromolecular 
+theory and 
+Simulations 
+A Theoretical 
+Investigation of 
+the Electrical 
+and Dielectric 
+Properties of 
+Mr. V. Prasanna 
+Venkatesh 
+Scopus 
+ 
+ 
+08/02/2024 
+PDMS-CNT 
+ 
+6 
+Journal of Materials 
+Science: Materials in 
+Electronics 
+Photocatalytic 
+activity of Ag 
+doped CuFe2O4 
+nanoparticles 
+supported on 
+reduced 
+graphene oxide 
+for the 
+degradation of 
+organic dyes 
+under visible 
+light irradiation 
+Dr. D. Mathan  
+Scopus 
+ 
+ 
+ 
+ 
+21/02/2024 
+7 
+ 
+Diamond and Related 
+Materials 
+ 
+“Fabrication of 
+NiFe2O4 
+nanoparticles 
+loaded on 
+activated carbon 
+as novel 
+composites for 
+high efficient 
+ultra violet-light 
+photocatalysis 
+for degradation 
+of aqueous 
+organic 
+pollutants 
+Dr. D. Mathan  
+Scopus 
+ 
+ 
+ 
+ 
+ 
+04/03/2024 
+8 
+Chemical 
+Physics 
+Letters 
+Vitexnegundo 
+and Euphorbia 
+milii leaf 
+extracts aided 
+green synthesis 
+of copper oxide 
+nanostructures 
+for effective 
+inactivation of 
+pathogenic 
+bacteria, 
+Dr. R. 
+Jothilakshmi 
+Scopus 
+ 
+ 
+ 
+ 
+13/10/2023 
+9 
+Results in Chemistry 
+ 
+Cow dung 
+extract as a low-
+cost and natural 
+sensitizer for 
+zinc oxide 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+nanoparticles 
+photoanode 
+based dye-
+sensitized solar 
+cell: A novel 
+initiative for 
+waste to energy 
+conversion 
+ 
+ 
+Dr. R. 
+Jothilakshmi 
+ 
+ 
+Scopus 
+ 
+ 
+06/12/2023 
+10 
+Results in Chemistry 
+ 
+Sunlight 
+assisted 
+degradation of 
+methylene blue 
+dye by zinc 
+oxide 
+nanoparticles 
+green 
+synthesized 
+using 
+Vitexnegundo 
+plant leaf 
+extract 
+Dr. R. 
+Jothilakshmi 
+Scopus 
+ 
+ 
+ 
+ 
+07/01/2024 
+ 
+Academic Year 2022-2023 
+S. 
+No 
+Name of the 
+Journal/ 
+Conference 
+Title of the 
+Paper 
+Name of the 
+Author 
+SCI/SCOPUS/ 
+WoS/Google 
+Scholar 
+Date of 
+Publication 
+1 
+Microscopy Research 
+and Technique  
+Strain mediated 
+electrical and 
+optical 
+properties of 
+novel lead-free 
+CuFe2O4-
+KNbO3 nanoco
+mposite solid 
+solutions: a 
+combined 
+experimental 
+and DFT studies 
+Dr. R. Rajesh 
+Scopus 
+ 
+ 
+ 
+ 
+07/06/2022 
+2 
+Crystals 
+Rietveld 
+Refinement, 
+Structural 
+Characterization
+, and Methylene 
+Blue Adsorption 
+Dr. R. Rajesh 
+Scopus 
+ 
+ 
+23/11/2022 
+of the New 
+Compound 
+Ba0.54Na0.46Nb1.2
+9W0.37O 
+3 
+International Journal 
+of Applied Ceramic 
+Technology 
+Oxygen 
+octahedra 
+distortion-
+induced 
+multiferroic 
+properties of Er 
+and Zr co-doped 
+Bi

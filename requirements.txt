@@ -1,10 +1,15 @@
 # Railway Backend Requirements
 # Optimized for CPU-only deployment (no CUDA)
 
-# Web Framework
+# Web Framework (legacy Flask app — kept until fully retired)
 flask>=3.0.0
 flask-cors>=4.0.0
 gunicorn>=21.0.0
+
+# Web Framework (new production API)
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+pydantic-settings>=2.5.0
 
 # LangChain Ecosystem (minimal)
 langchain
@@ -12,6 +17,7 @@ langchain-core
 langchain-community
 langchain-text-splitters
 langchain-groq
+langgraph
 
 # Document Processing
 pypdf
@@ -22,7 +28,13 @@ pymupdf
 --extra-index-url https://download.pytorch.org/whl/cpu
 torch
 sentence-transformers
-faiss-cpu
+chromadb
+
+# Web retrieval (no API key required)
+ddgs
+
+# Conversation memory / logging
+sqlalchemy
 
 # Utilities
 python-dotenv

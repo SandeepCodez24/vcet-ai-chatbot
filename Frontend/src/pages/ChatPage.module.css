@@ -1,0 +1,94 @@
+/* ============================================================
+   ChatPage — Active conversation view (Screens 3 & 4)
+   ============================================================ */
+
+.page {
+  min-height: 100dvh;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── "Hi" user chip — top right ───────────────────────────── */
+.userChip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--surface-container-highest);
+  color: var(--on-surface);
+  font-family: var(--font-sans);
+  font-size: var(--text-label-md);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.userChip:hover {
+  background: var(--surface-bright);
+}
+
+/* ── More options icon button ─────────────────────────────── */
+.moreBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: var(--on-surface-variant);
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+.moreBtn:hover {
+  background: var(--overlay-07);
+  color: var(--on-surface);
+}
+
+/* ── Scroll area ──────────────────────────────────────────── */
+.messagesArea {
+  flex: 1;
+  overflow-y: auto;
+  padding-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  /* fade content behind top bar */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 4%,
+    black 92%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 4%,
+    black 92%,
+    transparent 100%
+  );
+  scroll-behavior: smooth;
+}
+
+/* ── Empty state (should not show in chat page, but fallback) */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 0.5rem;
+  color: var(--on-surface-variant);
+  opacity: 0.35;
+  font-family: var(--font-sans);
+  font-size: var(--text-label-md);
+}

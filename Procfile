@@ -1,1 +1,1 @@
-web: /opt/venv/bin/gunicorn server:app --bind 0.0.0.0:$PORT --workers 1 --timeout 120
+web: /opt/venv/bin/gunicorn api.main:app -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:$PORT --workers 1 --timeout 120

@@ -1,0 +1,247 @@
+/* ============================================================
+   AuthPage — Sign In / Sign Up screen
+   Design: "Intellectual Noir" — Figma: VCET-Bot / Screen 1
+   ============================================================ */
+
+.page {
+  min-height: 100dvh;
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem var(--margin-mobile);
+}
+
+/* ── Card / Container ─────────────────────────────────────── */
+.card {
+  width: 100%;
+  max-width: 390px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  /* slight fade-in on mount */
+  animation: fadeUp 0.45s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Logo area ────────────────────────────────────────────── */
+.logoArea {
+  margin-bottom: 2.5rem;
+}
+
+/* ── Headline ─────────────────────────────────────────────── */
+.headline {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-weight: 500;
+  color: var(--on-surface);
+  text-align: center;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-bottom: 2rem;
+  max-width: 280px;
+}
+
+/* ── Form ─────────────────────────────────────────────────── */
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ── Remember me row ──────────────────────────────────────── */
+.rememberRow {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.25rem 0.25rem 0.5rem;
+}
+
+.toggle {
+  position: relative;
+  width: 36px;
+  height: 22px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.toggleInput {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  margin: 0;
+  z-index: 1;
+}
+
+.toggleTrack {
+  position: absolute;
+  inset: 0;
+  background: var(--surface-container-high);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--overlay-10);
+  transition: background var(--transition-base);
+}
+
+.toggleInput:checked + .toggleTrack {
+  background: var(--primary-container);
+}
+
+.toggleThumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  background: var(--on-surface-variant);
+  border-radius: 50%;
+  transition: transform var(--transition-base), background var(--transition-base);
+  pointer-events: none;
+}
+
+.toggleInput:checked ~ .toggleThumb {
+  transform: translateX(14px);
+  background: var(--on-primary);
+}
+
+.rememberLabel {
+  font-family: var(--font-sans);
+  font-size: var(--text-label-md);
+  color: var(--on-surface-variant);
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ── CTA button ───────────────────────────────────────────── */
+.ctaWrap {
+  margin-top: 0.5rem;
+}
+
+/* ── OR divider ───────────────────────────────────────────── */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.25rem 0 0.75rem;
+  width: 100%;
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background: var(--overlay-08);
+}
+
+.dividerText {
+  font-family: var(--font-sans);
+  font-size: var(--text-label-sm);
+  color: var(--on-surface-variant);
+  opacity: 0.6;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ── Toggle link ──────────────────────────────────────────── */
+.toggleLink {
+  font-family: var(--font-sans);
+  font-size: var(--text-body-md);
+  color: var(--on-surface-variant);
+  text-align: center;
+}
+
+.toggleLink button {
+  background: none;
+  border: none;
+  font: inherit;
+  color: var(--primary);
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0;
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.toggleLink button:hover {
+  opacity: 0.8;
+}
+
+/* ── Terms text ───────────────────────────────────────────── */
+.terms {
+  font-family: var(--font-sans);
+  font-size: var(--text-label-sm);
+  color: var(--on-surface-variant);
+  opacity: 0.45;
+  text-align: center;
+  line-height: 1.6;
+  margin-top: 1.25rem;
+  max-width: 300px;
+}
+
+.terms a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ── Form field slide-in animation ──────────────────────────*/
+.fieldEnter {
+  animation: slideDown 0.3s ease both;
+  overflow: hidden;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    max-height: 100px;
+    transform: translateY(0);
+  }
+}
+
+/* ── Mode indicator chips ────────────────────────────────── */
+.modeTabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+  background: var(--surface-container);
+  padding: 0.25rem;
+  border-radius: var(--radius-full);
+}
+
+.modeTab {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: var(--text-label-md);
+  font-weight: 500;
+  color: var(--on-surface-variant);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition:
+    background var(--transition-base),
+    color var(--transition-base);
+}
+
+.modeTab.active {
+  background: var(--surface-bright);
+  color: var(--on-surface);
+}

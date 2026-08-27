@@ -1,0 +1,11 @@
+.venv
+__pycache__
+*.pyc
+.git
+.env
+Frontend
+legacy
+docs
+data
+*.md
+!README.md

@@ -2,6 +2,11 @@
 # `gcloud run deploy --source .` builds this directly (Cloud Build resolves the repo's
 # Git LFS blobs, i.e. chroma_store/, into the build context before this runs — no
 # manual `git lfs pull` step needed, same as it would be on any other git-based build).
+#
+# cache-bust 2026-09-08: two straight Railway builds failed silently right after image
+# export (same digest both times) — this comment invalidates BuildKit's cache for the
+# COPY-onward layers so the export/push actually reruns fresh instead of replaying the
+# same cached (and apparently unpushable) image blob.
 
 FROM python:3.11-slim
 
